@@ -1,0 +1,292 @@
+# Copyright (C) 2026 Bit Apps
+# This file is distributed under the GPLv2 or later.
+msgid ""
+msgstr ""
+"Project-Id-Version: Bit SMTP 1.2.3\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/bit-smtp\n"
+"Last-Translator: developer@bitcode.pro\n"
+"Language-Team: support@bitapps.pro\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2026-02-20T09:59:38+00:00\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"X-Generator: WP-CLI 2.12.0\n"
+"X-Domain: bit-smtp\n"
+
+#. Plugin Name of the plugin
+#: bit_smtp.php
+#: backend/app/Config.php:245
+#: backend/app/Config.php:246
+msgid "Bit SMTP"
+msgstr ""
+
+#. Plugin URI of the plugin
+#: bit_smtp.php
+msgid "https://www.bitapps.pro/bit-smtp"
+msgstr ""
+
+#. Description of the plugin
+#: bit_smtp.php
+msgid "Send email via SMTP using BIT SMTP plugin by Bit Apps"
+msgstr ""
+
+#. Author of the plugin
+#: bit_smtp.php
+msgid "Bit Apps"
+msgstr ""
+
+#. Author URI of the plugin
+#: bit_smtp.php
+msgid "https://bitapps.pro"
+msgstr ""
+
+#: backend/app/Config.php:213
+msgid "Settings"
+msgstr ""
+
+#: backend/app/HTTP/Controllers/LogController.php:46
+#: languages/generatedString.php:48
+msgid "Log deleted"
+msgstr ""
+
+#: backend/app/HTTP/Controllers/LogController.php:49
+#: languages/generatedString.php:50
+msgid "Failed to delete log"
+msgstr ""
+
+#: backend/app/HTTP/Controllers/LogController.php:57
+#: languages/generatedString.php:62
+msgid "Log retention period updated successfully"
+msgstr ""
+
+#: backend/app/HTTP/Controllers/LogController.php:60
+#: languages/generatedString.php:64
+msgid "Failed to update log retention period"
+msgstr ""
+
+#: backend/app/HTTP/Controllers/LogController.php:75
+msgid "Logging updated"
+msgstr ""
+
+#: backend/app/HTTP/Controllers/LogController.php:78
+#: languages/generatedString.php:88
+msgid "Failed to update logging setting"
+msgstr ""
+
+#: backend/app/HTTP/Controllers/SMTPController.php:46
+#: languages/generatedString.php:14
+msgid "SMTP config saved successfully"
+msgstr ""
+
+#: backend/app/HTTP/Controllers/SMTPController.php:82
+msgid "Mail sent successfully"
+msgstr ""
+
+#: backend/app/HTTP/Controllers/SMTPController.php:85
+#: backend/app/HTTP/Controllers/SMTPController.php:89
+#: languages/generatedString.php:96
+msgid "Mail send testing failed"
+msgstr ""
+
+#: backend/app/HTTP/Controllers/SMTPController.php:104
+msgid "Invalid log ID"
+msgstr ""
+
+#: backend/app/HTTP/Controllers/SMTPController.php:111
+msgid "Log not found"
+msgstr ""
+
+#: backend/app/HTTP/Controllers/SMTPController.php:126
+#: languages/generatedString.php:52
+msgid "Mail resent"
+msgstr ""
+
+#: backend/app/HTTP/Controllers/SMTPController.php:129
+#: languages/generatedString.php:54
+msgid "Failed to resend mail"
+msgstr ""
+
+#: backend/app/Providers/SmtpProvider.php:169
+msgid "SMTP configuration is not correct. PHPMailer could not connect to the SMTP server"
+msgstr ""
+
+#: backend/bootstrap.php:14
+msgid "The SMTP plugin is not installed properly. Please run \"composer install\" in the plugin directory."
+msgstr ""
+
+#: languages/generatedString.php:4
+msgid "404"
+msgstr ""
+
+#: languages/generatedString.php:6
+msgid "Failed to parsed response"
+msgstr ""
+
+#: languages/generatedString.php:8
+msgid "Lost In Space"
+msgstr ""
+
+#: languages/generatedString.php:10
+msgid "Redirecting Home in"
+msgstr ""
+
+#: languages/generatedString.php:12
+msgid "Go Home"
+msgstr ""
+
+#: languages/generatedString.php:16
+msgid "SMTP config saving failed"
+msgstr ""
+
+#: languages/generatedString.php:18
+msgid "SMTP Configuration"
+msgstr ""
+
+#: languages/generatedString.php:20
+msgid "Enable Mail"
+msgstr ""
+
+#: languages/generatedString.php:22
+msgid "From Email Address"
+msgstr ""
+
+#: languages/generatedString.php:24
+msgid "From Name"
+msgstr ""
+
+#: languages/generatedString.php:26
+msgid "Reply-To Email Address"
+msgstr ""
+
+#: languages/generatedString.php:28
+msgid "SMTP Host"
+msgstr ""
+
+#: languages/generatedString.php:30
+msgid "SMTP Port"
+msgstr ""
+
+#: languages/generatedString.php:32
+msgid "Encryption"
+msgstr ""
+
+#: languages/generatedString.php:34
+msgid "SMTP Authentication"
+msgstr ""
+
+#: languages/generatedString.php:36
+msgid "SMTP Username"
+msgstr ""
+
+#: languages/generatedString.php:38
+msgid "SMTP Password"
+msgstr ""
+
+#: languages/generatedString.php:40
+msgid "Configuration"
+msgstr ""
+
+#: languages/generatedString.php:42
+msgid "Test"
+msgstr ""
+
+#: languages/generatedString.php:44
+msgid "Logs"
+msgstr ""
+
+#: languages/generatedString.php:46
+msgid "Others"
+msgstr ""
+
+#: languages/generatedString.php:56
+msgid "Download"
+msgstr ""
+
+#: languages/generatedString.php:58
+msgid "Resend"
+msgstr ""
+
+#: languages/generatedString.php:60
+msgid "Delete"
+msgstr ""
+
+#: languages/generatedString.php:66
+msgid "Days"
+msgstr ""
+
+#: languages/generatedString.php:68
+msgid "Number of days to retain logs before automatic deletion."
+msgstr ""
+
+#: languages/generatedString.php:70
+msgid "Log Retention Settings"
+msgstr ""
+
+#: languages/generatedString.php:72
+msgid "Status"
+msgstr ""
+
+#: languages/generatedString.php:74
+msgid "Subject"
+msgstr ""
+
+#: languages/generatedString.php:76
+msgid "To"
+msgstr ""
+
+#: languages/generatedString.php:78
+msgid "Retry"
+msgstr ""
+
+#: languages/generatedString.php:80
+msgid "Sent At"
+msgstr ""
+
+#: languages/generatedString.php:82
+msgid "Search To address"
+msgstr ""
+
+#: languages/generatedString.php:84
+msgid "Logging enabled"
+msgstr ""
+
+#: languages/generatedString.php:86
+msgid "Logging disabled"
+msgstr ""
+
+#: languages/generatedString.php:90
+msgid "Toggle logging"
+msgstr ""
+
+#: languages/generatedString.php:92
+msgid "Logging: ON"
+msgstr ""
+
+#: languages/generatedString.php:94
+msgid "Logging: OFF"
+msgstr ""
+
+#: languages/generatedString.php:98
+msgid "Test mail sent successfully"
+msgstr ""
+
+#: languages/generatedString.php:100
+msgid "Test Your Mail"
+msgstr ""
+
+#: languages/generatedString.php:102
+msgid "Send Test Email"
+msgstr ""
+
+#: languages/generatedString.php:104
+msgid "Hide Message"
+msgstr ""
+
+#: languages/generatedString.php:106
+msgid "Add Message"
+msgstr ""
+
+#: languages/generatedString.php:108
+msgid "Message"
+msgstr ""

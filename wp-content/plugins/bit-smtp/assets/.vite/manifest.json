@@ -1,0 +1,67 @@
+{
+  "_antd-InaCheeS.js": {
+    "file": "antd-InaCheeS.js",
+    "name": "antd",
+    "imports": [
+      "_react-vendor-CoaL_UJh.js"
+    ]
+  },
+  "_react-Cdl2XZds.js": {
+    "file": "@emotion/react-Cdl2XZds.js",
+    "name": "@emotion/react",
+    "imports": [
+      "_react-vendor-CoaL_UJh.js"
+    ]
+  },
+  "_react-query-Ckka2BLk.js": {
+    "file": "@tanstack/react-query-Ckka2BLk.js",
+    "name": "@tanstack/react-query",
+    "imports": [
+      "_react-vendor-CoaL_UJh.js"
+    ]
+  },
+  "_react-router-dom-DZmXFfUv.js": {
+    "file": "react-router-dom-DZmXFfUv.js",
+    "name": "react-router-dom",
+    "imports": [
+      "_react-vendor-CoaL_UJh.js"
+    ]
+  },
+  "_react-vendor-CoaL_UJh.js": {
+    "file": "react-vendor-CoaL_UJh.js",
+    "name": "react-vendor"
+  },
+  "main.tsx": {
+    "file": "main.1.2.3.js",
+    "name": "main",
+    "src": "main.tsx",
+    "isEntry": true,
+    "imports": [
+      "_react-vendor-CoaL_UJh.js",
+      "_react-Cdl2XZds.js",
+      "_react-router-dom-DZmXFfUv.js",
+      "_antd-InaCheeS.js",
+      "_react-query-Ckka2BLk.js"
+    ],
+    "css": [
+      "main.1.2.3.css"
+    ],
+    "assets": [
+      "bf-821-2.png",
+      "bf-155-0.svg",
+      "bf-932-1.svg"
+    ]
+  },
+  "resource/img/adBanner.png": {
+    "file": "bf-821-2.png",
+    "src": "resource/img/adBanner.png"
+  },
+  "resource/img/bitAssist.svg": {
+    "file": "bf-155-0.svg",
+    "src": "resource/img/bitAssist.svg"
+  },
+  "resource/img/bitFileManager.svg": {
+    "file": "bf-932-1.svg",
+    "src": "resource/img/bitFileManager.svg"
+  }
+}

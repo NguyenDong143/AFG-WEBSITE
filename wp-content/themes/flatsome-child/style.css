@@ -1,0 +1,3437 @@
+/*
+Theme Name: Flatsome Child
+Description: This is a child theme for Flatsome Theme
+Author: UX Themes
+Template: flatsome
+Version: 3.0
+*/
+
+/*************** ADD CUSTOM CSS HERE.   ***************/
+
+/* Fix strong tag not working */
+strong,
+b {
+    font-weight: bold !important;
+}
+
+/* =========================================
+   AFG Service Color System (Homepage)
+   ========================================= */
+
+.xc-home-tab .afg-service-heading {
+    margin: 0 0 14px !important;
+    font-size: 48px !important;
+    line-height: 1.15 !important;
+    font-weight: 700 !important;
+}
+
+.xc-home-tab .afg-service-row {
+    border-top: 0 !important;
+    border: 1px solid var(--afg-border) !important;
+    border-left: 3px solid var(--afg-accent) !important;
+    border-radius: 14px !important;
+    background: var(--afg-bg) !important;
+    padding: 18px 18px 20px !important;
+    margin: 8px 0 34px !important;
+    display: flex !important;
+    align-items: flex-start !important;
+}
+
+.xc-home-tab .afg-service-row>.col {
+    margin-bottom: 0 !important;
+}
+
+.xc-home-tab .afg-service-row>.col:first-child {
+    flex: 0 0 300px !important;
+    max-width: 300px !important;
+}
+
+.xc-home-tab .afg-service-row>.col:last-child {
+    flex: 1 1 auto !important;
+    max-width: calc(100% - 300px) !important;
+    padding-left: 20px !important;
+}
+
+.xc-home-tab .afg-service-badge p {
+    margin: 0 0 8px !important;
+    display: inline-flex;
+    border: 1px solid var(--afg-border);
+    border-radius: 999px;
+    padding: 4px 10px;
+    font-size: 11px !important;
+    font-weight: 700 !important;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: var(--afg-heading) !important;
+}
+
+.xc-home-tab .afg-service-left-title p {
+    margin: 0 0 8px !important;
+    font-size: 30px !important;
+    line-height: 1.2 !important;
+    font-weight: 700 !important;
+    color: var(--afg-heading) !important;
+}
+
+.xc-home-tab .afg-service-row>.col:first-child>.col-inner>p {
+    color: var(--afg-text) !important;
+    font-size: 18px !important;
+    line-height: 1.45 !important;
+    margin-bottom: 16px !important;
+}
+
+.xc-home-tab .afg-service-meta p {
+    margin: 12px 0 !important;
+    font-size: 12px !important;
+    line-height: 1.35 !important;
+    color: var(--afg-text) !important;
+    opacity: 0.95;
+}
+
+.xc-home-tab .afg-service-row .button {
+    margin-top: 10px !important;
+    background: var(--afg-accent) !important;
+    border-color: var(--afg-accent) !important;
+    color: var(--afg-cta-text) !important;
+    border-radius: 8px !important;
+}
+
+.xc-home-tab .afg-service-row .button span,
+.xc-home-tab .afg-service-row .button i {
+    color: var(--afg-cta-text) !important;
+}
+
+.xc-home-tab .afg-service-row .afg-service-list {
+    margin-top: 0 !important;
+}
+
+.xc-home-tab .afg-service-row .afg-service-list>.col.medium-2 {
+    flex: 0 0 56px !important;
+    max-width: 56px !important;
+}
+
+.xc-home-tab .afg-service-row .afg-service-list>.col.medium-10 {
+    flex: 1 1 calc(100% - 56px) !important;
+    max-width: calc(100% - 56px) !important;
+}
+
+.xc-home-tab .afg-service-row .afg-service-list .img {
+    width: 36px !important;
+    height: 36px !important;
+    border-radius: 10px !important;
+    background: var(--afg-icon-bg) !important;
+    margin: 0 auto !important;
+}
+
+.xc-home-tab .afg-service-row .afg-service-list .img .img-inner {
+    width: 100% !important;
+    height: 100% !important;
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    padding: 7px !important;
+}
+
+.xc-home-tab .afg-service-row .afg-service-list .img img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: contain !important;
+}
+
+.xc-home-tab .afg-service-row .afg-service-list .text p {
+    margin: 0 0 10px !important;
+    font-size: 13px !important;
+    line-height: 1.45 !important;
+    font-weight: 500 !important;
+    color: var(--afg-text) !important;
+}
+
+.xc-home-tab .afg-service-row--fulfillment {
+    --afg-bg: #EAF3DE;
+    --afg-border: #C0DD97;
+    --afg-heading: #27500A;
+    --afg-text: #3B6D11;
+    --afg-accent: #3B6D11;
+    --afg-cta-text: #EAF3DE;
+    --afg-icon-bg: #27500A;
+}
+
+.xc-home-tab .afg-service-row--logistics {
+    --afg-bg: #E6F1FB;
+    --afg-border: #B5D4F4;
+    --afg-heading: #0C447C;
+    --afg-text: #185FA5;
+    --afg-accent: #185FA5;
+    --afg-cta-text: #E6F1FB;
+    --afg-icon-bg: #0C447C;
+}
+
+.xc-home-tab .afg-service-row--expansion {
+    --afg-bg: #FAEEDA;
+    --afg-border: #FAC775;
+    --afg-heading: #633806;
+    --afg-text: #854F0B;
+    --afg-accent: #854F0B;
+    --afg-cta-text: #FAEEDA;
+    --afg-icon-bg: #633806;
+}
+
+.xc-home-tab .afg-service-heading--fulfillment {
+    color: #27500A !important;
+}
+
+.xc-home-tab .afg-service-heading--logistics {
+    color: #0C447C !important;
+}
+
+.xc-home-tab .afg-service-heading--expansion {
+    color: #633806 !important;
+}
+
+@media (max-width: 849px) {
+    .xc-home-tab .afg-service-heading {
+        font-size: 34px !important;
+    }
+
+    .xc-home-tab .afg-service-row {
+        padding: 14px !important;
+    }
+
+    .xc-home-tab .afg-service-row>.col:first-child,
+    .xc-home-tab .afg-service-row>.col:last-child {
+        flex: 0 0 100% !important;
+        max-width: 100% !important;
+        padding-left: 0 !important;
+    }
+
+    .xc-home-tab .afg-service-left-title p {
+        font-size: 24px !important;
+    }
+}
+
+/* Custom H1 Style */
+.h1-custom {
+    font-size: 24px !important;
+    font-weight: 700 !important;
+    margin-top: 8px !important;
+    line-height: 1.2 !important;
+}
+
+@media (min-width: 1025px) {
+    .h1-custom {
+        font-size: 48px !important;
+    }
+}
+
+/* =========================================
+   Tầm nhìn & Sứ mệnh Section
+   ========================================= */
+.col-tam-nhin-left,
+.col-tam-nhin-right {
+    display: flex !important;
+}
+
+.col-tam-nhin-left .col-inner,
+.col-tam-nhin-right .col-inner {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+/* Left Column: Image */
+.col-tam-nhin-left .col-inner {
+    padding: 0 !important;
+    /* Remove padding here to allow image to be the "box" */
+    height: 100%;
+}
+
+.col-tam-nhin-left .img,
+.col-tam-nhin-left .img-inner {
+    height: 100% !important;
+    padding-top: 0 !important;
+    /* Disable Flatsome's aspect ratio padding */
+}
+
+.col-tam-nhin-left .img-inner img {
+    height: 100% !important;
+    object-fit: cover !important;
+    /* Ensure image fills space without stretching */
+    border-radius: 20px !important;
+    /* Match right box rounding */
+}
+
+/* Right Column: Text Content Box */
+.col-tam-nhin-right .col-inner {
+    background-color: #fff !important;
+    padding: 2.5rem !important;
+    box-shadow: 0 12px 32px rgba(16, 24, 40, 0.1) !important;
+    border-radius: 20px !important;
+    justify-content: center;
+    height: 100%;
+}
+
+@media (max-width: 849px) {
+    .col-tam-nhin-right .col-inner {
+        padding: 1.5rem !important;
+        margin-top: 20px;
+    }
+
+    .col-tam-nhin-left .img-inner img {
+        height: auto !important;
+        /* Back to auto on mobile */
+    }
+
+    .col-tam-nhin-left .img-inner {
+        padding-top: 70% !important;
+        /* Restore ratio for mobile */
+    }
+}
+
+/* =========================================
+   Equal Height Layout (.row-left-right-same)
+   ========================================= */
+.row-left-right-same {
+    display: flex !important;
+    flex-wrap: wrap;
+}
+
+.row-left-right-same>.col {
+    display: flex !important;
+}
+
+.row-left-right-same>.col>.col-inner {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+/* Force elements inside to stretch */
+.row-left-right-same .img,
+.row-left-right-same .img-inner {
+    height: 100% !important;
+    padding-top: 0 !important;
+    /* Remove Flatsome aspect ratio padding */
+    display: flex !important;
+    width: 100% !important;
+}
+
+.row-left-right-same .img-inner img {
+    height: 100% !important;
+    width: 100% !important;
+    object-fit: cover !important;
+    /* Fill the container without stretching */
+}
+
+@media (max-width: 849px) {
+    .row-left-right-same .img-inner {
+        padding-top: 60% !important;
+        /* Restore a default ratio for mobile stacking */
+    }
+
+    .row-left-right-same .img-inner img {
+        height: 100% !important;
+        /* Maintain the fill behavior */
+    }
+}
+
+
+/* =========================================
+   Grab Footer Replication Styles
+   ========================================= */
+
+/* --- RESET FLATSOME DEFAULTS --- */
+/* Reset padding/margin on the main wrapper columns to prevent Flatsome layout shifts */
+.xc-footer-copyright .col,
+.xc-footer-copyright .col-inner {
+    padding-bottom: 0 !important;
+    padding-top: 0 !important;
+    margin-bottom: 0 !important;
+}
+
+/* Fix Row Width & Spacing */
+.xc-footer-copyright .row {
+    max-width: 100% !important;
+    /* Ensure it doesn't get constrained unexpectedly */
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    width: auto !important;
+    display: flex;
+    /* Enforce flexbox */
+}
+
+/* If the row has standard flatsome negative margins, we might need to reset them if we reset col padding */
+/* However, usually it's better to zero out the col padding-left/right if we zero the row margin */
+.xc-footer-copyright .row-collapse>.col,
+.xc-footer-copyright .row>.col {
+    padding-left: 15px;
+    /* Keep some gutter or reset to 0 if desired. Grab is full width usually contained. */
+    padding-right: 15px;
+}
+
+/* For this footer, let's keep it clean */
+.xc-footer-copyright .row {
+    margin-left: auto !important;
+    margin-right: auto !important;
+    max-width: 1200px !important;
+    /* Standard container width */
+}
+
+
+/* --- VISUAL STYLES --- */
+
+/* Section Background & Base Colors */
+.xc-footer-copyright,
+.xc-footer-copyright .section-bg,
+.xc-footer-copyright .section-bg.fill {
+    background-color: #363a45 !important;
+    color: #fff !important;
+}
+
+/* Typography */
+.xc-footer-copyright,
+.xc-footer-copyright a,
+.xc-footer-copyright p,
+.xc-footer-copyright span {
+    color: #fff;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.5;
+    /* Normalize line height */
+}
+
+/* Links (Terms, Privacy) */
+.xc-menu .ux-menu-link__link {
+    color: #fff !important;
+    font-weight: 500;
+    font-size: 16px;
+    opacity: 1;
+    padding: 0 5px;
+    border: none !important;
+    display: flex;
+    /* Ensure flex for vertical align within link */
+    align-items: center;
+}
+
+.xc-menu .ux-menu-link__link:hover {
+    text-decoration: underline;
+    background: transparent !important;
+    /* flatsome often adds bg hover */
+}
+
+/* Divider Dot (Desktop) */
+@media (min-width: 850px) {
+    .xc-menu .menu-item:not(:last-child)::after {
+        content: "•";
+        margin-left: 10px;
+        margin-right: 5px;
+        color: #fff;
+        display: inline-block;
+        vertical-align: middle;
+        /* Align dot vertically */
+    }
+}
+
+/* Copyright Text */
+.xc-copy-right-text,
+.xc-copy-right-text p {
+    color: rgba(255, 255, 255, 0.6) !important;
+    font-size: 16px;
+    margin: 0 !important;
+    line-height: 1 !important;
+    /* Tighten line height to remove vertical gap drift */
+    display: inline-block;
+    /* Prevent block expansion */
+}
+
+/* App Icons Image Reset */
+.xc-copyright-app img {
+    height: 38px !important;
+    width: auto !important;
+    object-fit: contain;
+    max-width: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    display: block;
+}
+
+/* Hover effects for images */
+.xc-copyright-app .img-inner {
+    transition: opacity 0.3s;
+}
+
+.xc-copyright-app .img-inner:hover {
+    opacity: 0.8;
+}
+
+/* --- LAYOUT / ALIGNMENT --- */
+@media (min-width: 850px) {
+
+    /* 1. Vertically Align Main Row content */
+    .xc-footer-copyright .row {
+        align-items: center;
+    }
+
+    /* 2. Vertically Align content inside main Columns */
+    /* Flatsome wraps content in .col-inner. We make that a flex container too. */
+    .xc-footer-copyright>.run-command>.row>.col>.col-inner,
+    /* Just in case structure varies */
+    .xc-footer-copyright .row>.col>.col-inner {
+        display: flex !important;
+        align-items: center !important;
+        height: 100%;
+    }
+
+    /* Col 1: Menu - Left */
+    .xc-menu.ux-menu {
+        flex-direction: row !important;
+        justify-content: flex-start !important;
+        flex-wrap: nowrap !important;
+        margin-bottom: 0 !important;
+        align-items: center !important;
+        /* Verify menu items align */
+    }
+
+    /* Fix Dot Alignment */
+    .xc-menu .menu-item:not(:last-child)::after {
+        content: "•";
+        margin-left: 10px;
+        margin-right: 5px;
+        color: #fff;
+        display: inline-block;
+        line-height: 1;
+        /* Reset line height for precise align */
+        position: relative;
+        top: 1px;
+        /* Nudge down slightly if it feels high, or remove if centered. Usually bullets need slight tweak. */
+    }
+
+    .xc-menu .menu-item {
+        margin: 0 !important;
+        display: flex;
+        align-items: center;
+    }
+
+    /* Ensure the Col wrapper for Menu aligns left */
+    .xc-footer-copyright .row>.col:first-child .col-inner {
+        justify-content: flex-start !important;
+    }
+
+    /* Col 2: Copyright - Center */
+    .xc-copy-right-text {
+        text-align: center;
+        width: 100%;
+        display: flex !important;
+        justify-content: center !important;
+        align-items: center !important;
+    }
+
+    /* Ensure the Col wrapper for Copyright aligns center */
+    .xc-footer-copyright .row>.col:nth-child(2) .col-inner {
+        justify-content: center !important;
+    }
+
+    /* Col 3: Apps - Right */
+    .xc-copyright-app {
+        justify-content: flex-end !important;
+        flex-wrap: nowrap !important;
+        display: flex !important;
+        margin: 0 !important;
+        width: auto !important;
+        align-items: center !important;
+        /* Use flex align for the row of images */
+    }
+
+    /* Ensure the Col wrapper for Apps aligns right */
+    .xc-footer-copyright .row>.col:last-child .col-inner {
+        justify-content: flex-end !important;
+    }
+
+    /* Reset internal columns for app images */
+    .xc-copyright-app>.col {
+        flex: 0 0 auto !important;
+        max-width: none !important;
+        width: auto !important;
+        padding: 0 0 0 10px !important;
+        margin: 0 !important;
+        display: flex !important;
+        /* Make the small col flex too */
+        align-items: center !important;
+    }
+
+    .xc-copyright-app .col-inner {
+        margin: 0 !important;
+        padding: 0 !important;
+        display: flex !important;
+    }
+
+    /* Flatten the image wrapper divs if they exist */
+    .xc-copyright-app .img {
+        margin: 0 !important;
+        line-height: 0;
+    }
+}
+
+/* --- MOBILE --- */
+/* Match breakpoint to desktop min-width to avoid gap */
+@media screen and (max-width: 849px) {
+    .xc-footer-copyright .row {
+        flex-direction: column;
+    }
+
+    /* Force Vertical Stack for Menu */
+    .xc-menu.ux-menu {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        justify-content: center !important;
+        padding-bottom: 15px;
+        width: 100%;
+    }
+
+    .xc-menu .menu-item {
+        display: flex !important;
+        justify-content: center;
+        width: 100%;
+        margin-bottom: 5px !important;
+        /* Spacing between items */
+    }
+
+    .xc-menu .menu-item:not(:last-child)::after {
+        content: none;
+    }
+
+    /* Center Copyright */
+    .xc-copy-right-text {
+        text-align: center;
+        padding-bottom: 15px;
+        justify-content: center !important;
+        display: flex;
+        width: 100%;
+    }
+
+    .xc-copy-right-text p {
+        font-size: 14px;
+    }
+
+    /* Center Apps */
+    .xc-copyright-app {
+        justify-content: center !important;
+        display: flex !important;
+        flex-wrap: wrap !important;
+        gap: 10px;
+        width: 100%;
+    }
+
+    .xc-copyright-app>.col {
+        padding: 0 !important;
+        flex: 0 0 auto !important;
+        width: auto !important;
+        max-width: none !important;
+    }
+}
+
+
+/* =========================================
+   Grab MAIN FOOTER (Sitemap) Styles
+   ========================================= */
+
+/* Main Section Container */
+.xc-footer.section,
+.xc-footer .section-bg,
+.xc-footer .section-bg.fill {
+    background-color: #eaeff2 !important;
+}
+
+.xc-footer.section {
+    padding-top: 40px !important;
+    /* Exact Grab padding */
+    padding-bottom: 40px !important;
+}
+
+/* Base Typography for this section */
+.xc-footer,
+.xc-footer p,
+.xc-footer a,
+.xc-footer li,
+.xc-footer span,
+.xc-footer div {
+    color: #363a45 !important;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif !important;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+/* --- LEFT COLUMN: COMPANY INFO --- */
+
+/* LOGO FIX */
+/* Target the logo image in the first column */
+.xc-footer .col:first-child .img img,
+.xc-footer .col:first-child .img .img-inner {
+    width: 78px !important;
+    max-width: 78px !important;
+    height: auto !important;
+}
+
+/* Slogan "Forward Together" */
+.xc-logo-sub-title p {
+    font-size: 16px !important;
+    font-weight: 500 !important;
+    margin-top: 16px !important;
+    /* Grab margin */
+    margin-bottom: 20px !important;
+    /* Grab margin */
+    line-height: 1.25 !important;
+}
+
+/* Company Details */
+.info-company p {
+    font-size: 14px !important;
+    line-height: 20px !important;
+    /* Specific line height */
+    margin-bottom: 20px !important;
+}
+
+/* "Follow us" Title */
+.xc-follow-us p {
+    font-size: 14px !important;
+    font-weight: 500 !important;
+    margin-bottom: 1.25rem !important;
+    /* Approx 20px */
+}
+
+/* Social Icons - FORCE OVERRIDE FLATSOME BUTTONS */
+.xc-follow-social {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.xc-follow-social .icon {
+    /* Reset Flatsome Button Styles */
+    border: none !important;
+    box-shadow: none !important;
+    text-shadow: none !important;
+    background-color: #363a45 !important;
+    color: #fff !important;
+
+    /* Exact Grab Dimensions - Ensure PERFECT SQUARE first */
+    width: 20px !important;
+    height: 20px !important;
+    min-width: 20px !important;
+    max-width: 20px !important;
+    min-height: 20px !important;
+    max-height: 20px !important;
+
+    padding: 0 !important;
+    margin-right: 5px !important;
+    /* Spacing between icons */
+    margin-left: 0 !important;
+    margin-bottom: 5px !important;
+    margin-top: 0 !important;
+
+    border-radius: 50% !important;
+
+    /* Center Content */
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+
+    font-size: 10px !important;
+    /* Small font size to fit */
+    line-height: 1 !important;
+    opacity: 1 !important;
+    box-sizing: border-box !important;
+}
+
+.xc-follow-social .icon i {
+    font-size: 10px !important;
+    /* Adjust internal icon size */
+    line-height: 1 !important;
+    width: auto !important;
+    height: auto !important;
+    display: block !important;
+    /* Remove inline issues */
+}
+
+.xc-follow-social .icon:hover {
+    opacity: 0.8 !important;
+    background-color: #363a45 !important;
+    transform: none !important;
+    /* Remove Flatsome hover pop */
+}
+
+/* --- RIGHT COLUMNS: SITEMAP MENUS --- */
+
+/* Wrapper adjustment */
+.xc-footer-menu {
+    border: none !important;
+    padding-bottom: 0 !important;
+    margin-bottom: 0 !important;
+}
+
+/* RESET FLATSOME STACK SPACING */
+/* Flatsome adds margin-top to stacked items, causing double spacing */
+.xc-footer-menu.stack-col>*+* {
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+}
+
+/* Menu Titles (Headings) */
+.xc-footer-menu .ux-menu-title {
+    font-size: 16px !important;
+    font-weight: 500 !important;
+    color: #363a45 !important;
+    margin-bottom: 10px !important;
+    /* Visual adjustment - reduced from 16px */
+    padding-bottom: 0 !important;
+    padding-top: 0 !important;
+    margin-top: 0 !important;
+    line-height: 1.4 !important;
+    /* Approx 22px */
+    text-transform: none !important;
+    letter-spacing: 0 !important;
+    padding-left: 0 !important;
+    display: block !important;
+    opacity: 1 !important;
+    min-height: 0 !important;
+    height: auto !important;
+}
+
+/* Menu Links */
+.xc-footer-menu .ux-menu-link__link {
+    padding: 2px 0 !important;
+    /* Slightly tighter padding for links */
+    min-height: 0 !important;
+    justify-content: flex-start !important;
+    opacity: 1 !important;
+    border: none !important;
+    margin-top: 0 !important;
+}
+
+.xc-footer-menu .ux-menu-link__text {
+    font-size: 14px !important;
+    font-weight: 400 !important;
+    color: #363a45 !important;
+    text-transform: none !important;
+    letter-spacing: normal !important;
+}
+
+.xc-footer-menu .ux-menu-link__link:hover .ux-menu-link__text {
+    text-decoration: underline !important;
+    color: #1594e6 !important;
+    /* Grab Blue Highlight */
+    background: none !important;
+}
+
+/* --- BOTTOM ROW: PAYMENT & REGISTRATION --- */
+.row-footer-bottom {
+    margin-top: 30px !important;
+    align-items: center;
+}
+
+/* Payment Info Text */
+.row-footer-bottom p {
+    font-size: 14px !important;
+    color: #363a45 !important;
+    margin-bottom: 0 !important;
+}
+
+/* Gov Image Alignment */
+.row-footer-bottom .img-inner {
+    text-align: right;
+    margin-bottom: 0 !important;
+}
+
+.row-footer-bottom img {
+    max-width: 150px !important;
+    width: auto !important;
+    margin: 0 !important;
+}
+
+/* Remove any col bottom padding that might cause gaps */
+.xc-footer .col {
+    padding-bottom: 0 !important;
+}
+
+/* =========================================
+   "See More About Us" & "Download App" CTA Sections
+   ========================================= */
+
+/* --- SHARED CONTAINER STYLES --- */
+.row-xem-them.row,
+.row-tai-ung-dung.row {
+    max-width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    width: 100% !important;
+}
+
+.row-xem-them .col,
+.row-xem-them .col-inner,
+.row-tai-ung-dung .col,
+.row-tai-ung-dung .col-inner {
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+/* --- COLORS --- */
+/* Xem them (See More) - Dark Green */
+.row-xem-them.row {
+    background-color: #002e27 !important;
+}
+
+/* Tai ung dung (Download) - Grab Green */
+.row-tai-ung-dung.row {
+    background-color: #00b14f !important;
+}
+
+/* --- SHARED BUTTON RESET & LAYOUT --- */
+.row-xem-them a.button,
+.row-tai-ung-dung a.button {
+    display: flex !important;
+    justify-content: flex-start;
+    align-items: center;
+
+    width: 100% !important;
+    height: 72px !important;
+    /* Mobile height */
+
+    background-color: transparent !important;
+
+    color: #fff !important;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif !important;
+    text-transform: capitalize !important;
+    font-weight: 600 !important;
+    font-size: 16px !important;
+    letter-spacing: 0 !important;
+
+    border: none !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    margin: 0 !important;
+
+    /* Padding Base */
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+}
+
+/* Button Text Span */
+.row-xem-them a.button span,
+.row-tai-ung-dung a.button span {
+    padding: 0 !important;
+    line-height: normal !important;
+}
+
+/* --- HOVER STATES --- */
+.row-xem-them a.button:hover {
+    background-color: #002e27 !important;
+    opacity: 1 !important;
+    color: #fff !important;
+}
+
+.row-tai-ung-dung a.button:hover {
+    background-color: #00b14f !important;
+    opacity: 1 !important;
+    color: #fff !important;
+}
+
+
+/* --- RESPONSIVE ADJUSTMENTS (Shared) --- */
+/* Padding Calculation to align with Grab container */
+
+@media (min-width: 768px) {
+
+    .row-xem-them a.button,
+    .row-tai-ung-dung a.button {
+        padding-left: calc(50% - 344px) !important;
+        padding-right: calc(50% - 344px) !important;
+    }
+}
+
+@media (min-width: 1025px) {
+
+    .row-xem-them a.button,
+    .row-tai-ung-dung a.button {
+        height: 80px !important;
+        font-size: 18px !important;
+        padding-left: calc(50% - 430px) !important;
+        padding-right: calc(50% - 430px) !important;
+    }
+}
+
+@media (min-width: 1280px) {
+
+    .row-xem-them a.button,
+    .row-tai-ung-dung a.button {
+        padding-left: calc(50% - 558px) !important;
+        padding-right: calc(50% - 558px) !important;
+    }
+}
+
+@media (min-width: 1440px) {
+
+    .row-xem-them a.button,
+    .row-tai-ung-dung a.button {
+        padding-left: calc(50% - 582px) !important;
+        padding-right: calc(50% - 582px) !important;
+    }
+}
+
+@media (min-width: 1680px) {
+
+    .row-xem-them a.button,
+    .row-tai-ung-dung a.button {
+        height: 88px !important;
+        padding-left: calc(50% - 678px) !important;
+        padding-right: calc(50% - 678px) !important;
+        font-size: 20px !important;
+    }
+}
+
+
+/* --- RESPONSIVE ADJUSTMENTS --- */
+/* Grab often collapses columns on mobile */
+@media (max-width: 849px) {
+
+    /* Mobile Spacing */
+    .xc-footer.section {
+        padding-top: 30px !important;
+        padding-bottom: 30px !important;
+    }
+
+    .xc-footer .col {
+        margin-bottom: 30px !important;
+    }
+
+    /* Footer Menu on Mobile */
+    .xc-footer-menu .ux-menu-title {
+        font-weight: 600 !important;
+        /* Slightly bolder on mobile maybe? */
+        margin-bottom: 10px !important;
+    }
+
+    /* Stack Footer Bottom properly */
+    .row-footer-bottom {
+        flex-direction: column-reverse;
+        /* Usually text below image or similar, check design. Grab puts text then image below or side by side. Flatsome col stacking puts col 1 (text) then col 2 (image). */
+        /* Let's stick to standard flow */
+        flex-direction: column !important;
+        margin-top: 10px !important;
+        align-items: flex-start !important;
+    }
+
+    .row-footer-bottom .col {
+        width: 100% !important;
+        text-align: left !important;
+        margin-bottom: 15px !important;
+    }
+
+    .row-footer-bottom .img-inner {
+        text-align: left !important;
+    }
+}
+
+/* =========================================
+   HEADER OVERRIDES (Match Grab.com)
+   ========================================= */
+
+/* --- LAYOUT STRUCTURE RE-ORDERING --- */
+/* Override Flatsome's 'Logo Center' layout to match Grab's 'Logo Left' layout */
+
+/* 1. Header Container - Reset to Flex Start */
+.header-main.show-logo-center .header-inner {
+    justify-content: flex-start !important;
+    /* Align everything to the left */
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+}
+
+/* 2. Left Column (Menu Button) - Order 1 */
+.header-main .flex-col.flex-left {
+    flex: 0 0 auto !important;
+    /* Shrink to fit */
+    max-width: none !important;
+    order: 1 !important;
+    /* First item */
+    margin-right: 25px !important;
+    /* Space between Menu and Logo */
+    width: auto !important;
+}
+
+/* 3. Logo Column - Order 2 */
+.header-main .flex-col.logo {
+    flex: 0 0 auto !important;
+    /* Shrink to fit */
+    max-width: none !important;
+    order: 2 !important;
+    /* Second item */
+    margin-right: auto !important;
+    /* Pushes Right Column to the far right */
+    padding: 0 !important;
+    width: auto !important;
+}
+
+/* 4. Right Column (Links) - Order 3 */
+.header-main .flex-col.flex-right {
+    flex: 0 0 auto !important;
+    max-width: none !important;
+    order: 3 !important;
+    /* Last item */
+    margin-left: 0 !important;
+    width: auto !important;
+}
+
+/* --- MENU BUTTON STYLING (The "Menu" Item) --- */
+/* Target the specific class .menu-item-110 */
+.menu-item-110 {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    height: 100% !important;
+    padding: 0 5px !important;
+}
+
+.menu-item-110>a {
+    display: flex !important;
+    flex-direction: column !important;
+    /* Stack: Icon Top, Text Bottom */
+    align-items: center !important;
+    justify-content: center !important;
+    line-height: 1 !important;
+    font-size: 11px !important;
+    font-weight: 500 !important;
+    color: #363a45 !important;
+    padding: 0 !important;
+    position: relative;
+    cursor: pointer;
+    text-transform: none !important;
+}
+
+/* Add Hamburger Icon via Pseudo-element on the Link */
+.menu-item-110>a::before {
+    content: "\f0c9";
+    /* FontAwesome Bars */
+    font-family: "FontAwesome" !important;
+    font-size: 32px !important;
+    /* Match Grab size */
+    color: #363a45 !important;
+    margin-bottom: 4px !important;
+    display: block !important;
+    text-align: center;
+    line-height: 1 !important;
+    font-weight: 900 !important;
+    /* Ensure solid weight for FA5 if needed, though flatsome usually uses FA4 legacy or FA5 shim */
+}
+
+/* Hide the default down arrow icon from Flatsome */
+.menu-item-110>a>.icon-angle-down {
+    display: none !important;
+}
+
+/* Hover state */
+.menu-item-110>a:hover {
+    color: #00b14f !important;
+    /* Grab Green on hover */
+    opacity: 1 !important;
+}
+
+.menu-item-110>a:hover::before {
+    color: #00b14f !important;
+}
+
+/* --- GLOBAL DROPDOWN POSITIONING --- */
+
+/* 1. Mega Menu (Menu Trigger) - Full Width Logic */
+/* We use position: static on the parent LI to allow the absolute child to position relative to the Header Container */
+.menu-item-110 {
+    position: static !important;
+}
+
+.menu-item-110 .nav-dropdown {
+    position: absolute !important;
+    top: 100% !important;
+    /* Bottom of Header */
+    left: 0 !important;
+    right: 0 !important;
+    width: 100vw !important;
+    /* Full Viewport Width */
+    max-width: none !important;
+
+    border: none !important;
+    /* Grab Background Gradient + Image */
+    background-color: #f6f8fa !important;
+    background-image: linear-gradient(to right, rgba(246, 248, 250, 1) 40%, rgba(246, 248, 250, 0.5)), url(https://assets.grab.com/wp-content/uploads/sites/11/2019/08/05054509/about-background1.jpg) !important;
+    background-repeat: no-repeat !important;
+    background-size: cover !important;
+    background-position: center !important;
+
+    box-shadow: 0 5px 12px rgba(0, 0, 0, .15) !important;
+    z-index: 1000 !important;
+}
+
+/* Force transparency on inner UX Block containers so the dropdown background shows */
+.menu-item-110 .nav-dropdown .section,
+.menu-item-110 .nav-dropdown .section-bg,
+.menu-item-110 .nav-dropdown .section-content,
+.menu-item-110 .nav-dropdown .row,
+.menu-item-110 .nav-dropdown .col,
+.menu-item-110 .nav-dropdown .col-inner {
+    background: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+}
+
+/* 2. Standard Dropdowns (Right Menu) - Aligned to Parent Item */
+/* We keep position: relative (Flatsome default) so they align horizontally with their text */
+.header-nav>li:not(.menu-item-110).has-dropdown {
+    position: relative !important;
+    display: flex !important;
+    align-items: center !important;
+    /* Center text vertically */
+}
+
+/* CRITICAL: Ensure the LI takes full height of the header so 'top: 100%' = Bottom of Header */
+.header-nav {
+    height: 100% !important;
+    align-items: stretch !important;
+    /* Make LIs stretch */
+}
+
+.header-nav>li {
+    height: 100% !important;
+}
+
+.header-nav>li>a {
+    height: 100% !important;
+    display: flex !important;
+    align-items: center !important;
+}
+
+/* Standard Dropdown Styling */
+.header-nav>li:not(.menu-item-110).has-dropdown .nav-dropdown {
+    position: absolute !important;
+    top: 100% !important;
+    /* Now matches Header Bottom because LI is 100% height */
+    left: auto !important;
+    /* Let it default or user-align (usually left 0 relative to LI) */
+    /* If Grab right-aligns specific menus, Flatsome 'nav-right' usually handles 'right: 0' automatically. */
+
+    z-index: 1000 !important;
+    margin-top: 0 !important;
+    border-radius: 4px !important;
+    border-top-left-radius: 0 !important;
+    border-top-right-radius: 0 !important;
+    box-shadow: 0 5px 12px rgba(0, 0, 0, .15) !important;
+    background-color: #fff !important;
+    min-width: 200px !important;
+    border-top: 1px solid #e5e9f0 !important;
+}
+
+/* High Z-Index for Header to ensure stacking above page content */
+#header .header-main {
+    z-index: 1001 !important;
+    position: relative !important;
+}
+
+/* Specifics for Right Menu Standard Dropdowns */
+/* The user said "tất cả sub menu". If we make standard dropdowns full width, they might look weird if they just have 2 items.
+   But if "hiện after header" means "detached from LI", position: static on LI achieves that.
+   We just need to ensure they have a reasonable width or alignment.
+*/
+
+/* Let's keep Right Menu dropdowns standard width but positioned correctly under the header */
+.header-nav.nav-right>li.has-dropdown .nav-dropdown {
+    /* If LI is static, this dropdown will try to be relative to Header.
+       We might need to let them be naturally positioned or manually aligned.
+       Actually, flatsome defaults to LI relative.
+       
+       If user wants "appear below header", position: static on LI is indeed the way.
+       But we need to ensure they align designated to their parent visually if not full width.
+       
+       However, simpler interpretation: The "Mega Menu" style separation "after header" is desired for everything?
+       Let's stick to the styling that worked for .menu-item-110 but apply the "separation" logic globally.
+    */
+
+    border-top: 1px solid #e5e9f0 !important;
+    /* Separator line like Mega Menu */
+}
+
+
+/* Dropdown Items (LI) */
+.header-nav .nav-dropdown>li {
+    border-bottom: 1px solid #f1f4f6 !important;
+    margin: 0 !important;
+    width: 100% !important;
+    display: block !important;
+}
+
+.header-nav .nav-dropdown>li:last-child {
+    border-bottom: none !important;
+}
+
+/* Dropdown Links (A) */
+.header-nav .nav-dropdown>li>a {
+    display: block !important;
+    padding: 12px 0 !important;
+    margin: 0 20px !important;
+    /* Keep text inside margins */
+    line-height: 22px !important;
+    font-size: 16px !important;
+    font-weight: 500 !important;
+    color: #363a45 !important;
+    background: transparent !important;
+    border-bottom: 2px solid transparent;
+    /* Prepare for hover underline */
+    text-transform: none !important;
+    white-space: nowrap !important;
+}
+
+/* Dropdown Hover Effect (Green Underline) */
+.header-nav .nav-dropdown>li>a:hover {
+    color: #363a45 !important;
+    /* Text color stays dark */
+    background-color: #fff !important;
+    /* No background change */
+    border-bottom: 2px solid #00b14f !important;
+    /* Grab Green Underline */
+    text-decoration: none !important;
+    /* padding-bottom could be visual, but border-bottom handles it */
+}
+
+/* Remove default Flatsome arrow in submenu if present */
+.header-nav .nav-dropdown>li.has-dropdown:after {
+    display: none !important;
+}
+
+/* Dropdown Arrow in Main Menu */
+.header-nav.nav-right>li>a>.icon-angle-down {
+    margin-left: 6px !important;
+    font-size: 14px !important;
+    opacity: 0.8 !important;
+}
+
+/* Search Icon Button */
+.header-search a.nav-top-link {
+    color: #363a45 !important;
+}
+
+.header-search a.nav-top-link .icon-search {
+    font-size: 18px !important;
+}
+
+/* Language Selector (GTranslate) Specifics */
+.gt_selector {
+    color: #363a45 !important;
+    font-weight: 500 !important;
+    font-size: 16px !important;
+    background: transparent !important;
+    border: none !important;
+    padding: 0 10px !important;
+    cursor: pointer;
+}
+
+/* Remove Flatsome Uppercase */
+.nav-uppercase {
+    text-transform: none !important;
+}
+
+/* --- MOBILE SPECIFIC --- */
+@media (max-width: 849px) {
+
+    /* Logo adjustments */
+    .header-main #logo img {
+        max-height: 30px !important;
+        height: 30px !important;
+    }
+
+    .header-main .header-inner.container {
+        padding-left: 15px !important;
+        padding-right: 15px !important;
+    }
+
+    /* Hide the Desktop "Menu" Text Item on Mobile */
+    .header-nav.nav-left>li.html.custom {
+        display: none !important;
+    }
+}
+
+/* =========================================
+   Service Section Heading (Text Dich Vu)
+   ========================================= */
+.text-dich-vu h3 {
+    margin: 0 0 20px;
+    font-family: inherit;
+    font-weight: 500;
+    color: #161a1d;
+    text-transform: none;
+    line-height: 1.4;
+    font-size: 24px;
+}
+
+@media (min-width: 768px) {
+    .text-dich-vu h3 {
+        font-size: 32px;
+        line-height: 1.25;
+    }
+}
+
+@media (min-width: 1025px) {
+    .text-dich-vu h3 {
+        font-size: 2.25rem;
+        line-height: 2.75rem;
+    }
+}
+
+@media (min-width: 1280px) {
+    .text-dich-vu h3 {
+        font-size: 2.5rem;
+        line-height: 2.75rem;
+    }
+}
+
+@media (min-width: 1680px) {
+    .text-dich-vu h3 {
+        font-size: 3rem;
+        line-height: 3.5rem;
+    }
+}
+
+/* =========================================
+   News Center Heading (XC Title)
+   ========================================= */
+.xc-title {
+    margin: 0 0 20px;
+    font-family: inherit;
+    font-weight: 500;
+    color: #161a1d;
+    text-transform: none;
+    line-height: 1.4;
+    font-size: 24px;
+}
+
+@media (min-width: 768px) {
+    .xc-title {
+        font-size: 32px;
+        line-height: 1.25;
+    }
+}
+
+@media (min-width: 1025px) {
+    .xc-title {
+        font-size: 2.25rem;
+        line-height: 2.75rem;
+    }
+}
+
+@media (min-width: 1280px) {
+    .xc-title {
+        font-size: 2.5rem;
+        line-height: 2.75rem;
+    }
+}
+
+@media (min-width: 1680px) {
+    .xc-title {
+        font-size: 3rem;
+        line-height: 3.5rem;
+    }
+}
+
+/* =========================================
+   Home Blog Section (.xc-home-blog)
+   ========================================= */
+
+/* Hide default elements */
+.xc-home-blog .badge.post-date,
+.xc-home-blog .is-divider,
+.xc-home-blog .cat-label {
+    display: none !important;
+}
+
+/* Clean up box styles */
+.xc-home-blog .box-blog-post {
+    background: transparent !important;
+    box-shadow: none !important;
+    border: none !important;
+}
+
+.xc-home-blog .box-text {
+    padding: 10px 0 0 0 !important;
+    /* Slight top spacing */
+}
+
+/* Image Adjustment */
+.xc-home-blog .box-image,
+.xc-home-blog .box-image img,
+.xc-home-blog .image-cover {
+    border-radius: 8px !important;
+}
+
+/* Post Date (Custom injected via PHP) */
+.xc-home-blog .xc-post-date {
+    color: #242a2e;
+    /* Updated color from darker text in snippet vs lighter grey */
+    /* Ref snippet: color: #697078; but actually in the snippet it says color: #697078 then #242a2e overrides it? 
+       Use #242a2e based on snippet .news-date___3YTuf */
+    color: #697078;
+    font-size: 0.75rem;
+    line-height: 1rem;
+    font-weight: 400;
+    margin-top: 12px;
+    margin-bottom: 8px;
+    text-align: left;
+    font-family: inherit;
+}
+
+@media (min-width: 1025px) {
+    .xc-home-blog .xc-post-date {
+        font-size: 0.75rem;
+        margin-top: 15px;
+        /* Visual spacing */
+    }
+}
+
+/* Title */
+.xc-home-blog .post-title {
+    text-align: left;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+.xc-home-blog .post-title a {
+    color: #242a2e !important;
+    font-size: 0.875rem !important;
+    line-height: 1.25rem !important;
+    font-weight: 400 !important;
+    margin-top: 0;
+    margin-bottom: 8px;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    height: 60px;
+    /* 3 lines * 20px */
+    text-transform: none !important;
+    letter-spacing: 0 !important;
+    font-family: inherit;
+}
+
+@media (min-width: 1025px) {
+    .xc-home-blog .post-title a {
+        font-size: 1rem !important;
+        line-height: 1.5rem !important;
+        height: 72px;
+        /* 3 lines * 24px */
+    }
+}
+
+/* Read More Button (Xem thêm) */
+.xc-home-blog .box-text-inner .button {
+    background: transparent !important;
+    color: #00804a !important;
+    font-size: 1rem !important;
+    line-height: 1.25rem !important;
+    font-weight: 600 !important;
+    text-transform: none !important;
+    padding: 0 !important;
+    margin: 16px 0 0 0 !important;
+    /* Top margin */
+    border: none !important;
+    box-shadow: none !important;
+    display: block !important;
+    /* Own line */
+    text-align: left;
+    width: 100%;
+    margin-bottom: 20px !important;
+}
+
+.xc-home-blog .box-text-inner .button:hover {
+    text-decoration: none !important;
+    opacity: 1 !important;
+}
+
+.xc-home-blog .post-title a:hover {
+    text-decoration: none !important;
+}
+
+/* =========================================
+   See More News Button (.xc-btn-more)
+   ========================================= */
+.button.xc-btn-more {
+    /* Reset Defaults */
+    margin: 0 !important;
+    box-shadow: none !important;
+    text-shadow: none !important;
+
+    /* Grab Style Layout */
+    background-color: #fff !important;
+    border: 1px solid rgba(2, 1, 1, .61) !important;
+    border-radius: 0 !important;
+
+    padding: 16px 48px !important;
+
+    height: auto !important;
+    width: auto !important;
+    display: inline-flex !important;
+    align-items: center;
+    justify-content: center;
+
+    /* Text Styling */
+    font-family: "Inter", Inter, sans-serif !important;
+    font-weight: 600 !important;
+    font-size: 20px !important;
+    line-height: 28px !important;
+    color: black !important;
+    text-transform: none !important;
+    letter-spacing: 0 !important;
+}
+
+.button.xc-btn-more span {
+    padding: 0 !important;
+    color: inherit !important;
+    font-family: inherit !important;
+    font-size: inherit !important;
+    font-weight: inherit !important;
+    text-transform: inherit !important;
+    letter-spacing: inherit !important;
+}
+
+.button.xc-btn-more:hover {
+    color: rgb(0, 83, 57) !important;
+    border-color: rgb(0, 83, 57) !important;
+    background-color: #fff !important;
+    /* Keep background white or transparent as implied */
+    text-decoration: none !important;
+    opacity: 1 !important;
+}
+
+/* =========================================
+   Home Tab Section (.xc-home-tab)
+   ========================================= */
+
+/* --- TAB NAVIGATION (Pills) --- */
+.xc-home-tab .nav {
+    border-bottom: none !important;
+    gap: 10px !important;
+    margin-bottom: 20px !important;
+    /* Reduced from 40px */
+    padding-top: 32px !important;
+    padding-bottom: 20px !important;
+    /* Reduced from 32px */
+}
+
+.xc-home-tab .nav li.tab {
+    margin: 0 !important;
+}
+
+/* Tab Links */
+.xc-home-tab .nav li.tab>a {
+    border: none !important;
+    background-color: transparent !important;
+    color: #697078 !important;
+    font-weight: 600 !important;
+    font-size: 16px !important;
+    border-radius: 20px !important;
+    /* Mobile default */
+    padding: 8px 16px !important;
+    transition: all 0.3s ease;
+    font-family: inherit !important;
+    text-transform: none !important;
+}
+
+/* Active & Hover States */
+.xc-home-tab .nav li.tab.active>a,
+.xc-home-tab .nav li.tab.active>a:hover {
+    background-color: #001e1f !important;
+    color: #f3f6fb !important;
+}
+
+.xc-home-tab .nav li.tab:not(.active)>a:hover {
+    color: #001e1f !important;
+}
+
+/* Remove default focus/active outlines */
+.xc-home-tab .nav li.tab>a:focus,
+.xc-home-tab .nav li.tab>a:active {
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+/* Desktop sizing */
+@media (min-width: 768px) {
+    .xc-home-tab .nav {
+        padding-top: 64px !important;
+        padding-bottom: 48px !important;
+        /* Reduced from 64px, still spacious but tighter */
+    }
+
+    .xc-home-tab .nav li.tab>a {
+        border-radius: 56px !important;
+        padding: 12px 32px !important;
+        font-size: 16px !important;
+    }
+}
+
+/* Mobile Scrollable Tabs */
+@media (max-width: 767px) {
+    .xc-home-tab .nav {
+        display: flex !important;
+        flex-wrap: nowrap !important;
+        overflow-x: auto !important;
+        justify-content: flex-start !important;
+        white-space: nowrap;
+        -ms-overflow-style: none;
+        /* IE/Edge */
+        scrollbar-width: none;
+        /* Firefox */
+        padding-left: 20px !important;
+        /* Side spacing */
+        padding-right: 20px !important;
+    }
+
+    .xc-home-tab .nav::-webkit-scrollbar {
+        display: none;
+    }
+
+    .xc-home-tab .nav li.tab {
+        flex: 0 0 auto !important;
+    }
+}
+
+/* --- TAB CONTENT & LAYOUT --- */
+.xc-home-tab .tab-panels {
+    border: none !important;
+    box-shadow: none !important;
+}
+
+/* Rows inside tabs */
+.xc-home-tab .row {
+    margin-bottom: 30px !important;
+}
+
+/* Section Titles (Left Col) */
+.xc-home-tab h3 {
+    margin: 0 0 20px !important;
+    font-family: inherit !important;
+    font-weight: 500 !important;
+    /* Grab Heading Style */
+    color: #161a1d !important;
+    font-size: 24px !important;
+    line-height: 1.4 !important;
+    text-transform: none !important;
+}
+
+@media (min-width: 768px) {
+    .xc-home-tab h3 {
+        font-size: 32px !important;
+        line-height: 1.25 !important;
+    }
+}
+
+/* Icon Box Styling (Right Col) */
+.xc-home-tab .icon-box-text h3 {
+    font-size: 18px !important;
+    font-weight: 500 !important;
+    margin-bottom: 5px !important;
+}
+
+.xc-home-tab .icon-box-text p {
+    font-size: 16px !important;
+    color: #383e43 !important;
+    line-height: 1.5 !important;
+    margin-bottom: 0 !important;
+}
+
+.xc-home-tab .icon-box-img {
+    margin-right: 20px !important;
+    /* Adjust spacing between icon and text */
+}
+
+/* Ensure icons align nicely */
+.xc-home-tab .icon-box {
+    align-items: flex-start !important;
+}
+
+/* =========================================
+   Grab Services Tab Row (.cs-row-tab)
+   ========================================= */
+
+/* 1. Row Border */
+.cs-row-tab {
+    border-top: 2px solid #e5e9f0 !important;
+}
+
+/* 2. Title (Left Column) */
+.cs-row-tab .col:first-child h3,
+.cs-row-tab h3.xc-content-tab-title {
+    font-family: inherit;
+    font-weight: 500;
+    color: #161a1d !important;
+    margin-top: 32px !important;
+    /* Matches top padding of right items */
+    margin-bottom: 20px !important;
+    font-size: 24px !important;
+    line-height: 1.167 !important;
+    text-transform: none !important;
+}
+
+@media (min-width: 768px) {
+
+    .cs-row-tab .col:first-child h3,
+    .cs-row-tab h3.xc-content-tab-title {
+        font-size: 32px !important;
+        line-height: 1.25 !important;
+    }
+}
+
+/* 3. Icon Box (Right Column Items - .cs-tab-icon-box) */
+
+.cs-tab-icon-box {
+    display: flex !important;
+    align-items: flex-start !important;
+    /* Ensure icon stays at top */
+    width: 100% !important;
+    padding: 32px 0 !important;
+}
+
+/* Separator Line */
+.cs-tab-icon-box+.cs-tab-icon-box {
+    border-top: 2px solid #e5e9f0 !important;
+}
+
+/* Icon / Image Styling */
+.cs-tab-icon-box .icon-box-img {
+    margin-right: 20px !important;
+    /* Mobile gap */
+    width: 56px !important;
+    /* Mobile icon size */
+    flex-shrink: 0 !important;
+    /* Prevent shrinking */
+    margin-bottom: 0 !important;
+    /* Reset Flatsome defaults */
+}
+
+/* Inner elements sizing */
+.cs-tab-icon-box .icon-box-img .icon-inner,
+.cs-tab-icon-box .icon-box-img svg,
+.cs-tab-icon-box .icon-box-img img {
+    width: 100% !important;
+    height: auto !important;
+    display: block !important;
+}
+
+/* Text Content Area */
+.cs-tab-icon-box .icon-box-text {
+    padding-left: 0 !important;
+    flex-grow: 1;
+    /* Allow text to take remaining space */
+}
+
+/* Service Title */
+.cs-tab-icon-box .icon-box-text h3 {
+    font-family: inherit;
+    font-size: 20px !important;
+    font-weight: 500 !important;
+    color: #161a1d !important;
+    margin-top: 0 !important;
+    margin-bottom: 8px !important;
+    line-height: 1.2 !important;
+    text-transform: none !important;
+}
+
+/* Service Description */
+.cs-tab-icon-box .icon-box-text p {
+    font-family: inherit;
+    font-size: 16px !important;
+    color: #383e43 !important;
+    margin-bottom: 0 !important;
+    line-height: 1.5 !important;
+}
+
+/* --- DESKTOP ADJUSTMENTS (Min Width 1025px) --- */
+@media (min-width: 1025px) {
+
+    /* Title Size */
+    .cs-tab-icon-box .icon-box-text h3 {
+        font-size: 24px !important;
+        line-height: 1.333 !important;
+    }
+
+    /* Description Size */
+    .cs-tab-icon-box .icon-box-text p {
+        font-size: 18px !important;
+        line-height: 1.75 !important;
+    }
+
+    /* Icon Size & Spacing */
+    .cs-tab-icon-box .icon-box-img,
+    .cs-tab-icon-box .icon-box-img .icon-inner {
+        width: 72px !important;
+    }
+
+    .cs-tab-icon-box .icon-box-img {
+        margin-right: 54px !important;
+        /* Desktop larger gap */
+    }
+}
+
+/* =========================================
+   GRAB PRESS SINGLE POST STYLES
+   (Adapted from User Provided Reference)
+   ========================================= */
+
+/* --- Grid & Layout Helpers (Bootstrap-like) --- */
+/* Reset for the press wrapper */
+.blog-single .entry-content {
+    max-width: 100% !important;
+    /* Override Flatsome limits */
+    padding-top: 20px;
+}
+
+/* --- Header / Blog Bar --- */
+.navBlog {
+    background-color: #fff;
+    min-height: 71px;
+    width: 100%;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
+    border-bottom: 1px solid #eee;
+}
+
+.blogBar {
+    width: 100%;
+}
+
+/* Green Header Box */
+.blogGreenBx {
+    height: 178px;
+    background-color: #33c066;
+    padding-top: 60px;
+    position: relative;
+    background-image: linear-gradient(to right, #00b14f, #00c75b);
+    background-size: cover;
+    background-position: center right;
+}
+
+.blogGreenBx h2 {
+    font-size: 45px;
+    line-height: 45px;
+    color: #fff;
+    font-weight: 700;
+    margin: 0;
+}
+
+/* Blog Menu Navigation */
+.blogmenu {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    padding-top: 17px;
+    padding-bottom: 15px;
+}
+
+.blogmenu li {
+    display: inline-block;
+    padding: 8px 30px;
+}
+
+.blogmenu li a {
+    color: #4a4a4a;
+    font-size: 18px;
+    font-weight: 500;
+    text-decoration: none;
+}
+
+.blogmenu li a:hover {
+    color: #00b140;
+}
+
+/* Back Button Specifics */
+.bckBtn a {
+    position: relative;
+    padding-left: 25px;
+    font-weight: 800 !important;
+}
+
+.bckBtn a::before {
+    content: "\f060";
+    /* FontAwesome Arrow Left */
+    font-family: "FontAwesome";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 14px;
+}
+
+/* --- Main Content Area --- */
+.mainBlog {
+    padding-top: 65px;
+    background-color: #f7f9fb;
+    /* Light grey bg like Grab */
+    min-height: 100vh;
+}
+
+/* Article Panel */
+.panel-article {
+    background-color: #ffffff;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
+    margin-bottom: 30px;
+    padding: 30px;
+    border: 1px solid transparent;
+    /* Bootstrap default mimic */
+}
+
+.panel-body {
+    padding: 0;
+}
+
+/* Typography in Article */
+.panel-article h2 {
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 1.2;
+    color: #565d6b;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.bigBx h2 {
+    font-size: 38px;
+    /* Larger title for main post */
+    color: #33c066;
+    /* Grab Green Title */
+}
+
+/* Meta Data */
+.post-cat strong {
+    text-transform: uppercase;
+    color: #898d97;
+}
+
+.post-date {
+    color: #aeaeae;
+    font-style: italic;
+}
+
+/* Content Text */
+.entry-content {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #565d6b;
+    font-weight: 300;
+}
+
+.entry-content p {
+    margin-bottom: 20px;
+}
+
+/* Images */
+.press-hero-image {
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+}
+
+/* Right Sidebar Adjustments */
+.rightBar .widget {
+    background: #fff;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
+}
+
+.rightBar h2.widget-title {
+    font-size: 18px;
+    font-weight: 700;
+    color: #565d6b;
+    border-bottom: none;
+    margin-bottom: 15px;
+}
+
+/* Mobile Helpers */
+@media (max-width: 767px) {
+    .blogGreenBx {
+        height: auto;
+        padding: 40px 20px;
+    }
+
+    .blogGreenBx h2 {
+        font-size: 30px;
+    }
+
+    .mainBlog {
+        padding-top: 30px;
+    }
+
+    .panel-article {
+        padding: 20px;
+    }
+
+    .bigBx h2 {
+        font-size: 26px;
+    }
+
+    .blogmenu li {
+        padding: 5px 10px;
+    }
+}
+
+/* Hide flatsome dividers that interfere with design */
+.is-divider {
+    display: none !important;
+}
+
+/* =========================================
+   GRAB BLOG LISTING STYLES
+   ========================================= */
+
+/* Nav & Header */
+.navBlog {
+    background-color: #fff;
+    min-height: 71px;
+    width: 100%;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
+}
+
+.blogBar {
+    height: auto;
+    position: relative;
+    width: 100%;
+}
+
+.blogmenu {
+    padding: 0px;
+    margin: 0px;
+    list-style: none;
+    padding-top: 17px;
+    padding-bottom: 15px;
+    overflow: hidden;
+}
+
+.blogmenu li {
+    display: inline-block;
+    padding: 8px 30px;
+}
+
+.blogmenu li a {
+    color: #4a4a4a;
+    font-size: 18px;
+    line-height: 22px;
+    font-weight: 400;
+    text-decoration: none;
+}
+
+.blogmenu li a:hover,
+.blogmenu li a:focus {
+    color: #00b140;
+}
+
+.blogmenu li.active a {
+    color: #00b14f;
+    font-weight: 700;
+}
+
+.blogGreenBx {
+    height: 178px;
+    background-color: #33c066;
+    padding-top: 60px;
+    position: relative;
+    /* Use a default gradient or image if specific one missing */
+    background-image: linear-gradient(to right, #00b14f, #00c75b);
+    background-size: cover;
+    background-position: center right;
+}
+
+.blogGreenBx h2 {
+    font-size: 45px;
+    line-height: 45px;
+    color: #fff;
+    font-weight: 700;
+    margin: 0;
+}
+
+/* Main Layout */
+.mainBlog {
+    padding-top: 65px;
+    background-color: #f7f9fb;
+    min-height: 100vh;
+}
+
+
+
+/* Panels & Articles */
+.panel-article {
+    border: none;
+    background-color: #ffffff;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
+    margin-bottom: 30px;
+    padding: 0;
+    /* Changed from 30px to 0 to allow full-width image */
+    display: block;
+}
+
+.panel-hero {
+    min-height: 216px;
+    max-height: 216px;
+    /* Reference restriction */
+    width: 100%;
+    /* Force full width */
+    background-size: cover;
+    background-position: center;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+    overflow: hidden;
+}
+
+.bigBx .panel-hero {
+    min-height: 350px;
+}
+
+/* Updated Panel Styles from Reference */
+.panel-article {
+    border: none;
+    background-color: #ffffff;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
+    border-radius: 0px;
+    /* Reference says 0px */
+    margin-bottom: 20px;
+    display: block;
+}
+
+.panel-body {
+    padding: 30px !important;
+    /* Reference: 30px 30px */
+}
+
+.panel-article h2 {
+    font-weight: 700;
+    font-size: 30px;
+    /* Reference: 30px */
+    line-height: 1.07;
+    /* Reference: 1.07 */
+    color: #565d6b;
+    margin-top: 10px;
+
+    /* Clamp Title to 2 lines */
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    /* Height logic: 1.07em * 2 lines ≈ 2.2em strict */
+    height: 2.2em;
+}
+
+/* Hover styles from reference */
+a:hover .panel-article h2,
+a:focus .panel-article h2,
+.blogHyperlink:hover h2 {
+    color: #00b140 !important;
+}
+
+.bigBx h2 {
+    font-size: 30px;
+    height: auto;
+    /* Allow big box title to be flexible or clamped differently if needed */
+    -webkit-line-clamp: 3;
+    /* Maybe allow 3 lines for the big one */
+}
+
+/* Meta data */
+.post-cat strong {
+    text-transform: uppercase;
+    color: #898d97;
+    margin-right: 10px;
+    margin-bottom: 0px;
+    /* Reference adjust */
+    display: inline-block;
+}
+
+.post-date {
+    color: #aeaeae;
+    font-style: italic;
+}
+
+/* Grid System Overrides for this page */
+#masonry-grid {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -15px;
+    margin-right: -15px;
+}
+
+.grid-item {
+    padding: 0 10px;
+    /* Reduced from 15px */
+    margin-bottom: 30px;
+    display: flex;
+}
+
+.grid-item .panel-article {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.grid-item .panel-body {
+    flex-grow: 1;
+}
+
+a.blogHyperlink {
+    text-decoration: none;
+    display: block;
+    height: 100%;
+    color: inherit;
+}
+
+a.blogHyperlink:hover h2 {
+    color: #00b140;
+}
+
+/* Right Sidebar Specifics */
+.wrapper-dropdown-5 {
+    position: relative;
+    width: 100%;
+    margin: 0 auto;
+    padding: 12px 15px;
+    background: #fff;
+    box-shadow: 0 1px 0 rgba(204, 214, 221, 1);
+    cursor: pointer;
+    outline: none;
+    font-weight: 300;
+    font-size: 18px;
+    color: #565d6b;
+}
+
+.socialList {
+    list-style: none;
+    padding: 0;
+    text-align: center;
+}
+
+.socialList li {
+    display: inline-block;
+    margin: 0 5px;
+    width: 40px;
+}
+
+.socialList img {
+    width: 100%;
+}
+
+.actionBtn {
+    background-color: #00b140;
+    color: #fff;
+    display: block;
+    padding: 15px;
+    text-align: center;
+    border-radius: 4px;
+    font-weight: 500;
+    margin-top: 10px;
+}
+
+.actionBtn:hover {
+    color: #fff;
+    background-color: #009e39;
+}
+
+/* Mid Box (Inside Grab / Engineering) */
+.midBx {
+    position: relative;
+    height: 200px;
+}
+
+.coverDiv {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.coverDiv h2 {
+    color: #fff;
+    margin: 0 0 10px 0;
+}
+
+.readBtnCls {
+    color: #fff;
+    border: 1px solid #fff;
+    padding: 5px 10px;
+    display: inline-block;
+    text-align: center;
+    border-radius: 4px;
+}
+
+/* Pagination */
+.simple-pagination {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    gap: 5px;
+}
+
+.simple-pagination li span,
+.simple-pagination li a {
+    padding: 5px 12px;
+    border: 1px solid #eee;
+    border-radius: 50%;
+    color: #333;
+}
+
+.simple-pagination li.active span {
+    border-color: #00b14f;
+    font-weight: bold;
+}
+
+/* =========================================
+   BOOTSTRAP GRID COMPATIBILITY (Scoped to .mainBlog)
+   ========================================= */
+.mainBlog .row {
+    margin-right: -15px !important;
+    margin-left: -15px !important;
+    display: flex;
+    flex-wrap: wrap;
+    width: auto !important;
+}
+
+/* Base column style */
+.mainBlog .col-xs-12,
+.mainBlog .col-md-9,
+.mainBlog .col-md-8,
+.mainBlog .col-md-6,
+.mainBlog .col-md-4,
+.mainBlog .col-md-3 {
+    position: relative;
+    min-height: 1px;
+    padding-right: 15px !important;
+    padding-left: 15px !important;
+    box-sizing: border-box;
+    float: none;
+}
+
+/* Column Widths */
+.mainBlog .col-xs-12 {
+    width: 100%;
+}
+
+.mainBlog .col-xs-7 {
+    width: 58.33333333%;
+}
+
+.mainBlog .col-xs-5 {
+    width: 41.66666667%;
+}
+
+@media (min-width: 992px) {
+    .mainBlog .col-md-9 {
+        width: 75%;
+    }
+
+    .mainBlog .col-md-8 {
+        width: 66.66666667%;
+    }
+
+    .mainBlog .col-md-6 {
+        width: 50%;
+    }
+
+    .mainBlog .col-md-4 {
+        width: 33.33333333%;
+    }
+
+    .mainBlog .col-md-3 {
+        width: 25%;
+    }
+}
+
+/* Visibility Utilities */
+.mainBlog .visible-xs {
+    display: none !important;
+}
+
+@media (max-width: 767px) {
+    .mainBlog .visible-xs {
+        display: block !important;
+    }
+
+    .mainBlog .hidden-xs {
+        display: none !important;
+    }
+}
+
+.clearfix::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Adjustments for Flatsome Collision */
+.mainBlog .container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Ensure images in the grid don't overflow */
+.mainBlog img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Custom Header Secondary Menu Styling */
+#menu-item-46>a,
+#menu-item-48>a {
+    font-weight: 500;
+    color: #363a45;
+    text-transform: none;
+    /* Override uppercase if set */
+    font-size: 16px;
+    padding: 10px 15px;
+    /* Adjust spacing */
+}
+
+#menu-item-46>a:hover,
+#menu-item-48>a:hover {
+    color: #23527c;
+    /* Or keep it transparent bg/underline as per reference? */
+    text-decoration: none;
+    background-color: transparent !important;
+    /* Flatsome might add hover bg */
+}
+
+/* Mega Menu Dropdown Container */
+#menu-item-110 .sub-menu {
+    max-width: 1440px !important;
+    /* Allow wide content */
+    width: 100vw;
+    /* Attempt full width if possible, or bounded by container */
+    left: 0;
+}
+
+/* Dropdown specific */
+#menu-item-46 .sub-menu {
+    border-radius: 4px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, .175);
+    border: 1px solid rgba(0, 0, 0, .15);
+    padding: 5px 0;
+}
+
+#menu-item-46 .sub-menu li a {
+    padding: 10px 20px;
+    font-size: 14px;
+    color: #333;
+    font-weight: 400;
+}
+
+#menu-item-46 .sub-menu li a:hover {
+    background-color: #f5f5f5;
+    color: #262626;
+}
+
+/* =========================================
+   MEGA MENU TABS (GRAB STYLE) - .xc-menu-tab
+   ========================================= */
+/* Container layout inside the mega menu dropdown */
+/* Container layout inside the mega menu dropdown */
+.xc-menu-tab {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: transparent !important;
+    /* Transparent to show gradient */
+    min-height: 400px;
+}
+
+/* Left Vertical Tabs */
+.xc-menu-tab .nav-vertical {
+    width: 338px;
+    /* Reference exact Grab width */
+    flex-shrink: 0;
+    border-right: 1px solid #f6f8fa;
+    /* Separator */
+    margin: 0;
+    padding: 0;
+    background-color: #fff;
+    /* Ensure sidebar is white */
+}
+
+.xc-menu-tab .nav-vertical li.tab {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    border-bottom: 1px solid #f6f8fa;
+}
+
+.xc-menu-tab .nav-vertical li.tab a {
+    height: 80px;
+    /* Fixed height per reference */
+    padding: 0 40px;
+    /* Left padding */
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+    font-weight: 700;
+    color: #363a45;
+    text-align: left;
+    text-transform: none;
+    /* No uppercase */
+    background-color: #fff;
+    border: none;
+    border-radius: 0;
+}
+
+/* Active Tab Style */
+.xc-menu-tab .nav-vertical li.tab.active a,
+.xc-menu-tab .nav-vertical li.tab a:hover {
+    background-color: #f6f8fa;
+    color: #363a45;
+}
+
+/* Right Content Panels */
+.xc-menu-tab .tab-panels {
+    flex-grow: 1;
+    padding: 20px 0 20px 30px;
+    background-color: transparent !important;
+    /* Transparent for content area */
+    border: none;
+}
+
+.xc-menu-tab .tab-panels .panel {
+    padding: 0;
+}
+
+/* Content Links inside Panels */
+.xc-menu-tab .col-inner h4,
+.xc-menu-tab .col-inner h4 a {
+    font-size: 20px !important;
+    /* Grab H4 Size */
+    font-weight: 500;
+    color: #161a1d;
+    margin-bottom: 5px;
+    text-transform: none;
+    display: block;
+}
+
+.xc-menu-tab .col-inner p {
+    font-size: 13px;
+    color: #777;
+    margin-bottom: 20px;
+}
+
+.xc-menu-tab .col-inner h4 a:hover {
+    color: #00b14f;
+    text-decoration: none;
+}
+
+/* Keep Flatsome native off-canvas behavior for mobile consistency. */
+
+.xc-counter {
+    height: 100%;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.xc-counter__num {
+    width: 100%;
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+    font-family: inherit;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 70px;
+    line-height: 112px;
+    letter-spacing: 0;
+    color: rgb(16, 24, 40);
+}
+
+.xc-counter__number {
+    font: inherit;
+}
+
+.xc-counter__suffix {
+    font-size: 1em;
+    font-weight: 600;
+    margin-left: 2px;
+    white-space: pre-wrap;
+}
+
+.xc-counter__title {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: inherit;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 25px;
+    line-height: 36px;
+    letter-spacing: 0;
+    color: rgb(16, 24, 40);
+}
+
+.xc-counter p {
+    margin: 0;
+}
+
+.xc-counter p:empty {
+    display: none !important;
+}
+
+.xc-counter br {
+    display: none !important;
+}
+
+@media (min-width:768px) {
+    .row .col:not(:last-child) .xc-counter {
+        border-right: 1px solid #e9ebea;
+    }
+}
+
+@media (max-width:767px) {
+    .xc-counter {
+        padding: 20px;
+    }
+
+    .xc-counter__num {
+        font-size: 36px;
+        line-height: 48px;
+    }
+
+    .xc-counter__title {
+        font-size: 14px;
+        line-height: 20px;
+    }
+
+    .row .col .xc-counter {
+        border: 0;
+    }
+
+    .row .col:nth-child(odd) .xc-counter {
+        border-right: 1px solid #e9ebea;
+    }
+
+    .row .col:nth-child(-n+2) .xc-counter {
+        border-bottom: 1px solid #e9ebea;
+    }
+}
+
+.row-usp {
+    background: #fff;
+    box-shadow: 0 12px 32px rgba(16, 24, 40, 0.08);
+    border-radius: 16px;
+    padding: 12px 0;
+}
+
+.row-usp>.col {
+    position: relative;
+}
+
+/* =========================================
+   Press Layout Unification (Desktop Primary)
+   ========================================= */
+
+.mainBlog .press-layout {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    align-items: flex-start;
+}
+
+.mainBlog .press-post-grid {
+    display: flex !important;
+    flex-wrap: wrap !important;
+}
+
+.mainBlog .press-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+    width: 100%;
+}
+
+.mainBlog .press-post-title {
+    margin-top: 0;
+    color: #333 !important;
+}
+
+.mainBlog .press-post-title a {
+    color: #333 !important;
+}
+
+.mainBlog .press-pagination-row {
+    margin-top: 50px;
+    margin-bottom: 50px;
+    text-align: center;
+}
+
+.mainBlog .press-featured-image-wrap {
+    margin-bottom: 20px;
+}
+
+/* Desktop baseline */
+@media (min-width: 1200px) {
+    .mainBlog .press-content {
+        width: 75%;
+    }
+
+    .mainBlog .press-sidebar {
+        width: 25%;
+    }
+}
+
+/* Tablet from desktop */
+@media (min-width: 850px) and (max-width: 1199px) {
+    .mainBlog .press-content {
+        width: 66.6667%;
+    }
+
+    .mainBlog .press-sidebar {
+        width: 33.3333%;
+    }
+
+    .mainBlog .press-pagination-row {
+        margin-top: 36px;
+        margin-bottom: 36px;
+    }
+}
+
+/* Mobile from desktop */
+@media (max-width: 849px) {
+    .mainBlog .press-layout,
+    .mainBlog .press-post-grid,
+    .mainBlog .press-meta {
+        display: block !important;
+    }
+
+    .mainBlog .press-content,
+    .mainBlog .press-sidebar {
+        width: 100% !important;
+    }
+
+    .mainBlog .press-meta .col {
+        width: 100% !important;
+        text-align: left !important;
+    }
+
+    .mainBlog .press-post-title {
+        font-size: 24px;
+        line-height: 1.25;
+    }
+
+    .mainBlog .press-pagination-row {
+        margin-top: 28px;
+        margin-bottom: 28px;
+    }
+}
+
+/* =========================================
+   Responsive Baseline (Desktop First)
+   Desktop is the source of truth.
+   Tablet/mobile only apply controlled reductions.
+   ========================================= */
+
+/* Tablet: 850px - 1199px */
+@media (min-width: 850px) and (max-width: 1199px) {
+    .header-main.show-logo-center .header-inner {
+        padding-left: 16px !important;
+        padding-right: 16px !important;
+    }
+
+    .mainBlog {
+        padding-top: 48px;
+    }
+
+    .panel-hero,
+    .bigBx .panel-hero {
+        min-height: 240px;
+        max-height: 240px;
+    }
+
+    .panel-article h2,
+    .bigBx h2 {
+        font-size: 26px;
+        line-height: 1.2;
+        height: auto;
+        -webkit-line-clamp: unset;
+        line-clamp: unset;
+    }
+
+    .xc-home-tab .nav {
+        padding-top: 48px !important;
+        padding-bottom: 32px !important;
+    }
+}
+
+/* Mobile: <= 849px */
+@media (max-width: 849px) {
+    .mainBlog .row {
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+        display: block;
+        width: 100% !important;
+    }
+
+    .mainBlog .col,
+    .mainBlog [class*="col-"] {
+        width: 100% !important;
+        max-width: 100% !important;
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+    }
+
+    .mainBlog .container {
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+
+    .mainBlog {
+        padding-top: 32px;
+    }
+
+    .panel-body {
+        padding: 20px !important;
+    }
+
+    .panel-hero,
+    .bigBx .panel-hero {
+        min-height: 190px;
+        max-height: 190px;
+    }
+
+    .panel-article h2,
+    .bigBx h2 {
+        font-size: 22px;
+        line-height: 1.25;
+        height: auto;
+        -webkit-line-clamp: unset;
+        line-clamp: unset;
+    }
+
+    .leftBar,
+    .rightBar {
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+    }
+
+    .rightBar {
+        margin-top: 24px;
+    }
+
+    .blogmenu {
+        overflow-x: auto;
+        white-space: nowrap;
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+    }
+
+.blogmenu::-webkit-scrollbar {
+        display: none;
+    }
+}
+
+/* =========================================
+   Fulfillment Block - Match reference layout
+   ========================================= */
+
+.xc-home-tab .afg-service-row--fulfillment {
+    display: grid !important;
+    grid-template-columns: 300px 1fr !important;
+    gap: 32px !important;
+    padding: 24px !important;
+    border-left-width: 4px !important;
+    border-radius: 16px !important;
+    width: 100% !important;
+    margin: 0 !important;
+    align-items: start !important;
+    justify-items: stretch !important;
+}
+
+.xc-home-tab .afg-service-row--fulfillment>.col:first-child,
+.xc-home-tab .afg-service-row--fulfillment>.col:last-child {
+    max-width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+.xc-home-tab .afg-service-row--fulfillment>.col:first-child {
+    flex: 0 0 300px !important;
+    width: 300px !important;
+}
+
+.xc-home-tab .afg-service-row--fulfillment>.col:last-child {
+    padding-left: 0 !important;
+    width: 100% !important;
+}
+
+.xc-home-tab .afg-service-row--fulfillment>.col:first-child>.col-inner {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+.xc-home-tab .afg-service-row--fulfillment>.col:last-child>.col-inner {
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+.xc-home-tab .afg-service-row--fulfillment .afg-service-badge p {
+    border-radius: 4px !important;
+    letter-spacing: 1px !important;
+    padding: 4px 10px !important;
+    font-size: 10px !important;
+}
+
+.xc-home-tab .afg-service-row--fulfillment .afg-service-left-title p {
+    font-size: 22px !important;
+    font-weight: 700 !important;
+    line-height: 1.3 !important;
+    margin: 0 !important;
+}
+
+.xc-home-tab .afg-service-row--fulfillment>.col:first-child>.col-inner>p {
+    margin: 0 !important;
+    font-size: 14px !important;
+    line-height: 1.7 !important;
+}
+
+.xc-home-tab .afg-service-row--fulfillment>.col:first-child .img,
+.xc-home-tab .afg-service-row--fulfillment>.col:first-child .img-inner,
+.xc-home-tab .afg-service-row--fulfillment>.col:first-child .img img {
+    width: 100% !important;
+}
+
+.xc-home-tab .afg-service-row--fulfillment>.col:first-child .img img {
+    height: 200px !important;
+    object-fit: cover !important;
+    border-radius: 10px !important;
+}
+
+.xc-home-tab .afg-service-row--fulfillment .afg-service-meta p {
+    font-size: 12px !important;
+    line-height: 1.6 !important;
+    opacity: 0.6 !important;
+    margin: 0 !important;
+}
+
+.xc-home-tab .afg-service-row--fulfillment .button {
+    width: 100% !important;
+    padding: 12px 20px !important;
+    border-radius: 8px !important;
+}
+
+.xc-home-tab .afg-service-row--fulfillment .button span {
+    font-size: 13px !important;
+    font-weight: 600 !important;
+    letter-spacing: 0.3px !important;
+}
+
+.xc-home-tab .afg-service-row--fulfillment .button i {
+    margin-left: 8px !important;
+}
+
+/* Right side - numbered cards */
+.xc-home-tab .afg-service-row--fulfillment .afg-service-list {
+    counter-reset: ffm-items;
+    gap: 10px !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+.xc-home-tab .afg-service-row--fulfillment .afg-service-list>.col {
+    width: 100% !important;
+    max-width: 100% !important;
+    flex: 0 0 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+.xc-home-tab .afg-service-row--fulfillment .afg-service-list>.col.medium-2,
+.xc-home-tab .afg-service-row--fulfillment .afg-service-list>.col.large-2 {
+    display: none !important;
+}
+
+.xc-home-tab .afg-service-row--fulfillment .afg-service-list>.col.medium-10,
+.xc-home-tab .afg-service-row--fulfillment .afg-service-list>.col.large-10 {
+    counter-increment: ffm-items;
+}
+
+.xc-home-tab .afg-service-row--fulfillment .afg-service-list>.col.medium-10>.col-inner,
+.xc-home-tab .afg-service-row--fulfillment .afg-service-list>.col.large-10>.col-inner {
+    width: 100% !important;
+    max-width: none !important;
+    padding: 14px 16px !important;
+    border-radius: 10px !important;
+    display: grid !important;
+    grid-template-columns: 44px 1fr !important;
+    gap: 12px !important;
+    align-items: start !important;
+    background: #eef7e8 !important;
+    border: 1px solid #c0dd97 !important;
+}
+
+.xc-home-tab .afg-service-row--fulfillment .afg-service-list>.col.medium-10>.col-inner::before,
+.xc-home-tab .afg-service-row--fulfillment .afg-service-list>.col.large-10>.col-inner::before {
+    content: counter(ffm-items, decimal-leading-zero);
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #c0dd97;
+    color: #27500a;
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 1;
+}
+
+.xc-home-tab .afg-service-row--fulfillment .afg-service-list .text {
+    align-self: center;
+    width: 100% !important;
+    max-width: none !important;
+}
+
+.xc-home-tab .afg-service-row--fulfillment .afg-service-list .text p {
+    margin: 0 !important;
+    font-size: 13px !important;
+    line-height: 1.55 !important;
+    font-weight: 500 !important;
+    color: #3b6d11 !important;
+}
+
+.xc-home-tab .afg-service-row--fulfillment .afg-service-list .text p strong {
+    display: block;
+    margin-bottom: 3px;
+    font-size: 15px;
+    font-weight: 600 !important;
+    color: #27500a !important;
+}
+
+.xc-home-tab .afg-service-row--fulfillment .afg-service-list .text p .afg-item-sub {
+    display: block;
+    font-size: 13px;
+    line-height: 1.5;
+    opacity: 0.8;
+    color: #3b6d11;
+}
+
+@media (max-width: 768px) {
+    .xc-home-tab .afg-service-row--fulfillment {
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 20px !important;
+        padding: 20px !important;
+    }
+
+    .xc-home-tab .afg-service-row--fulfillment>.col:first-child {
+        width: 100% !important;
+        flex: 0 0 100% !important;
+    }
+
+    .xc-home-tab .afg-service-row--fulfillment>.col:first-child .img img {
+        height: 200px !important;
+    }
+}
+
+/* =========================================
+   Logistics & Expansion - Match fulfillment layout
+   ========================================= */
+
+.xc-home-tab .afg-service-row--logistics,
+.xc-home-tab .afg-service-row--expansion {
+    display: grid !important;
+    grid-template-columns: 300px 1fr !important;
+    gap: 32px !important;
+    padding: 24px !important;
+    border-left-width: 4px !important;
+    border-radius: 16px !important;
+    width: 100% !important;
+    margin: 0 !important;
+    align-items: start !important;
+    justify-items: stretch !important;
+}
+
+.xc-home-tab .afg-service-row--logistics>.col:first-child,
+.xc-home-tab .afg-service-row--logistics>.col:last-child,
+.xc-home-tab .afg-service-row--expansion>.col:first-child,
+.xc-home-tab .afg-service-row--expansion>.col:last-child {
+    max-width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+.xc-home-tab .afg-service-row--logistics>.col:first-child,
+.xc-home-tab .afg-service-row--expansion>.col:first-child {
+    flex: 0 0 300px !important;
+    width: 300px !important;
+}
+
+.xc-home-tab .afg-service-row--logistics>.col:last-child,
+.xc-home-tab .afg-service-row--expansion>.col:last-child {
+    width: 100% !important;
+    padding-left: 0 !important;
+}
+
+.xc-home-tab .afg-service-row--logistics>.col:first-child>.col-inner,
+.xc-home-tab .afg-service-row--expansion>.col:first-child>.col-inner {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+.xc-home-tab .afg-service-row--logistics>.col:last-child>.col-inner,
+.xc-home-tab .afg-service-row--expansion>.col:last-child>.col-inner {
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+.xc-home-tab .afg-service-row--logistics .afg-service-badge p,
+.xc-home-tab .afg-service-row--expansion .afg-service-badge p {
+    border-radius: 4px !important;
+    letter-spacing: 1px !important;
+    padding: 4px 10px !important;
+    font-size: 10px !important;
+}
+
+.xc-home-tab .afg-service-row--logistics .afg-service-left-title p,
+.xc-home-tab .afg-service-row--expansion .afg-service-left-title p {
+    font-size: 38px !important;
+    font-weight: 700 !important;
+    line-height: 1.3 !important;
+    margin: 0 !important;
+}
+
+.xc-home-tab .afg-service-row--logistics>.col:first-child>.col-inner>p,
+.xc-home-tab .afg-service-row--expansion>.col:first-child>.col-inner>p {
+    margin: 0 !important;
+    font-size: 14px !important;
+    line-height: 1.7 !important;
+}
+
+.xc-home-tab .afg-service-row--logistics>.col:first-child .img,
+.xc-home-tab .afg-service-row--logistics>.col:first-child .img-inner,
+.xc-home-tab .afg-service-row--logistics>.col:first-child .img img,
+.xc-home-tab .afg-service-row--expansion>.col:first-child .img,
+.xc-home-tab .afg-service-row--expansion>.col:first-child .img-inner,
+.xc-home-tab .afg-service-row--expansion>.col:first-child .img img {
+    width: 100% !important;
+}
+
+.xc-home-tab .afg-service-row--logistics>.col:first-child .img img,
+.xc-home-tab .afg-service-row--expansion>.col:first-child .img img {
+    height: 200px !important;
+    object-fit: cover !important;
+    border-radius: 10px !important;
+}
+
+.xc-home-tab .afg-service-row--logistics .afg-service-meta p,
+.xc-home-tab .afg-service-row--expansion .afg-service-meta p {
+    font-size: 12px !important;
+    line-height: 1.6 !important;
+    opacity: 0.6 !important;
+    margin: 0 !important;
+}
+
+.xc-home-tab .afg-service-row--logistics .button,
+.xc-home-tab .afg-service-row--expansion .button {
+    width: 100% !important;
+    padding: 12px 20px !important;
+    border-radius: 8px !important;
+}
+
+.xc-home-tab .afg-service-row--logistics .button span,
+.xc-home-tab .afg-service-row--expansion .button span {
+    font-size: 13px !important;
+    font-weight: 600 !important;
+    letter-spacing: 0.3px !important;
+}
+
+.xc-home-tab .afg-service-row--logistics .button i,
+.xc-home-tab .afg-service-row--expansion .button i {
+    margin-left: 8px !important;
+}
+
+/* Numbered cards on right */
+.xc-home-tab .afg-service-row--logistics .afg-service-list,
+.xc-home-tab .afg-service-row--expansion .afg-service-list {
+    counter-reset: service-items;
+    gap: 10px !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+.xc-home-tab .afg-service-row--logistics .afg-service-list>.col,
+.xc-home-tab .afg-service-row--expansion .afg-service-list>.col {
+    width: 100% !important;
+    max-width: 100% !important;
+    flex: 0 0 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+.xc-home-tab .afg-service-row--logistics .afg-service-list>.col.medium-2,
+.xc-home-tab .afg-service-row--logistics .afg-service-list>.col.large-2,
+.xc-home-tab .afg-service-row--expansion .afg-service-list>.col.medium-2,
+.xc-home-tab .afg-service-row--expansion .afg-service-list>.col.large-2 {
+    display: none !important;
+}
+
+.xc-home-tab .afg-service-row--logistics .afg-service-list>.col.medium-10,
+.xc-home-tab .afg-service-row--logistics .afg-service-list>.col.large-10,
+.xc-home-tab .afg-service-row--expansion .afg-service-list>.col.medium-10,
+.xc-home-tab .afg-service-row--expansion .afg-service-list>.col.large-10 {
+    counter-increment: service-items;
+}
+
+.xc-home-tab .afg-service-row--logistics .afg-service-list>.col.medium-10>.col-inner,
+.xc-home-tab .afg-service-row--logistics .afg-service-list>.col.large-10>.col-inner,
+.xc-home-tab .afg-service-row--expansion .afg-service-list>.col.medium-10>.col-inner,
+.xc-home-tab .afg-service-row--expansion .afg-service-list>.col.large-10>.col-inner {
+    width: 100% !important;
+    max-width: none !important;
+    padding: 14px 16px !important;
+    border-radius: 10px !important;
+    display: grid !important;
+    grid-template-columns: 44px 1fr !important;
+    gap: 12px !important;
+    align-items: start !important;
+}
+
+.xc-home-tab .afg-service-row--logistics .afg-service-list>.col.medium-10>.col-inner,
+.xc-home-tab .afg-service-row--logistics .afg-service-list>.col.large-10>.col-inner {
+    background: #d8e8f9 !important;
+    border: 1px solid #9dc6ef !important;
+}
+
+.xc-home-tab .afg-service-row--expansion .afg-service-list>.col.medium-10>.col-inner,
+.xc-home-tab .afg-service-row--expansion .afg-service-list>.col.large-10>.col-inner {
+    background: #f7e8d1 !important;
+    border: 1px solid #f0b860 !important;
+}
+
+.xc-home-tab .afg-service-row--logistics .afg-service-list>.col.medium-10>.col-inner::before,
+.xc-home-tab .afg-service-row--logistics .afg-service-list>.col.large-10>.col-inner::before,
+.xc-home-tab .afg-service-row--expansion .afg-service-list>.col.medium-10>.col-inner::before,
+.xc-home-tab .afg-service-row--expansion .afg-service-list>.col.large-10>.col-inner::before {
+    content: counter(service-items, decimal-leading-zero);
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 1;
+}
+
+.xc-home-tab .afg-service-row--logistics .afg-service-list>.col.medium-10>.col-inner::before,
+.xc-home-tab .afg-service-row--logistics .afg-service-list>.col.large-10>.col-inner::before {
+    background: #9dc6ef;
+    color: #0c447c;
+}
+
+.xc-home-tab .afg-service-row--expansion .afg-service-list>.col.medium-10>.col-inner::before,
+.xc-home-tab .afg-service-row--expansion .afg-service-list>.col.large-10>.col-inner::before {
+    background: #f0b860;
+    color: #633806;
+}
+
+.xc-home-tab .afg-service-row--logistics .afg-service-list .text,
+.xc-home-tab .afg-service-row--expansion .afg-service-list .text {
+    align-self: center;
+    width: 100% !important;
+    max-width: none !important;
+}
+
+.xc-home-tab .afg-service-row--logistics .afg-service-list .text p,
+.xc-home-tab .afg-service-row--expansion .afg-service-list .text p {
+    margin: 0 !important;
+    font-size: 13px !important;
+    line-height: 1.55 !important;
+    font-weight: 500 !important;
+}
+
+.xc-home-tab .afg-service-row--logistics .afg-service-list .text p {
+    color: #185fa5 !important;
+}
+
+.xc-home-tab .afg-service-row--expansion .afg-service-list .text p {
+    color: #854f0b !important;
+}
+
+.xc-home-tab .afg-service-row--logistics .afg-service-list .text p strong,
+.xc-home-tab .afg-service-row--expansion .afg-service-list .text p strong {
+    display: block;
+    margin-bottom: 3px;
+    font-size: 15px;
+    font-weight: 600 !important;
+}
+
+.xc-home-tab .afg-service-row--logistics .afg-service-list .text p strong {
+    color: #0c447c !important;
+}
+
+.xc-home-tab .afg-service-row--expansion .afg-service-list .text p strong {
+    color: #633806 !important;
+}
+
+.xc-home-tab .afg-service-row--logistics .afg-service-list .text p .afg-item-sub,
+.xc-home-tab .afg-service-row--expansion .afg-service-list .text p .afg-item-sub {
+    display: block;
+    font-size: 13px;
+    line-height: 1.5;
+    opacity: 0.8;
+}
+
+.xc-home-tab .afg-service-row--logistics .afg-service-list .text p .afg-item-sub {
+    color: #185fa5;
+}
+
+.xc-home-tab .afg-service-row--expansion .afg-service-list .text p .afg-item-sub {
+    color: #854f0b;
+}
+
+@media (max-width: 768px) {
+    .xc-home-tab .afg-service-row--logistics,
+    .xc-home-tab .afg-service-row--expansion {
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 20px !important;
+        padding: 20px !important;
+    }
+
+    .xc-home-tab .afg-service-row--logistics>.col:first-child,
+    .xc-home-tab .afg-service-row--expansion>.col:first-child {
+        width: 100% !important;
+        flex: 0 0 100% !important;
+    }
+
+    .xc-home-tab .afg-service-row--logistics>.col:first-child .img img,
+    .xc-home-tab .afg-service-row--expansion>.col:first-child .img img {
+        height: 200px !important;
+    }
+}
