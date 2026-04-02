@@ -2735,14 +2735,132 @@ a.blogHyperlink:hover h2 {
 }
 
 .row-usp {
-    background: #fff;
-    box-shadow: 0 12px 32px rgba(16, 24, 40, 0.08);
+    background: #eef5ee;
+    border: 1px solid #d5e2d1;
+    box-shadow: none;
     border-radius: 16px;
-    padding: 12px 0;
+    padding: 22px 24px;
 }
 
 .row-usp>.col {
     position: relative;
+}
+
+.row-usp.afg-usp-modern {
+    display: grid !important;
+    grid-template-columns: minmax(300px, 42%) minmax(420px, 58%);
+    gap: 28px;
+    align-items: center;
+}
+
+.row-usp.afg-usp-modern>.col {
+    width: auto !important;
+    max-width: none !important;
+    flex: unset !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+.row-usp.afg-usp-modern>.col:last-child {
+    border-left: 1px solid #d5e2d1;
+    padding-left: 22px !important;
+}
+
+.row-usp.afg-usp-modern>.col:first-child {
+    padding-right: 14px !important;
+}
+
+.row-usp.afg-usp-modern>.col:first-child .video,
+.row-usp.afg-usp-modern>.col:first-child .responsive-video,
+.row-usp.afg-usp-modern>.col:first-child iframe {
+    width: 82% !important;
+    max-width: 360px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+.row-usp.afg-usp-modern>.col:first-child .video,
+.row-usp.afg-usp-modern>.col:first-child .responsive-video,
+.row-usp.afg-usp-modern>.col:first-child .video-fit,
+.row-usp.afg-usp-modern>.col:first-child .fluid-width-video-wrapper {
+    border-radius: 14px !important;
+    overflow: hidden !important;
+    box-shadow: 0 12px 24px rgba(16, 24, 40, 0.12);
+}
+
+.row-usp.afg-usp-modern>.col:first-child iframe {
+    border-radius: 14px !important;
+}
+
+.row-usp.afg-usp-modern .afg-usp-list {
+    display: grid;
+    gap: 16px;
+    max-width: 620px;
+}
+
+.row-usp.afg-usp-modern .afg-usp-item {
+    display: grid;
+    grid-template-columns: 36px 1fr;
+    gap: 12px;
+    align-items: start;
+    background: rgba(255, 255, 255, 0.72);
+    border: 1px solid #d5e2d1;
+    border-radius: 12px;
+    padding: 14px 16px;
+}
+
+.row-usp.afg-usp-modern .afg-usp-icon {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: #b7d88c;
+    color: #154c08;
+    font-size: 16px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.row-usp.afg-usp-modern .afg-usp-title {
+    margin: 0;
+    font-size: 16px;
+    line-height: 1.3;
+    color: #154c08;
+}
+
+.row-usp.afg-usp-modern .afg-usp-desc {
+    margin: 4px 0 0;
+    font-size: 14px;
+    line-height: 1.55;
+    color: #356f18;
+}
+
+@media (max-width: 900px) {
+    .row-usp.afg-usp-modern {
+        grid-template-columns: 1fr;
+        gap: 18px;
+        align-items: start;
+    }
+
+    .row-usp.afg-usp-modern>.col:last-child {
+        border-left: 0;
+        border-top: 1px solid #d5e2d1;
+        padding-left: 0 !important;
+        padding-top: 18px !important;
+    }
+
+    .row-usp.afg-usp-modern>.col:first-child {
+        padding-right: 0 !important;
+    }
+
+    .row-usp.afg-usp-modern>.col:first-child .video,
+    .row-usp.afg-usp-modern>.col:first-child .responsive-video,
+    .row-usp.afg-usp-modern>.col:first-child iframe {
+        width: 100% !important;
+        max-width: none;
+    }
 }
 
 /* =========================================
@@ -2949,12 +3067,15 @@ a.blogHyperlink:hover h2 {
 }
 
 /* =========================================
-   Fulfillment Block - Match reference layout
+   Unified Service Block Style
+   Use logistics layout as baseline for all 3 blocks
    ========================================= */
 
-.xc-home-tab .afg-service-row--fulfillment {
+.xc-home-tab .afg-service-row--fulfillment,
+.xc-home-tab .afg-service-row--logistics,
+.xc-home-tab .afg-service-row--expansion {
     display: grid !important;
-    grid-template-columns: 300px 1fr !important;
+    grid-template-columns: 50% 50% !important;
     gap: 32px !important;
     padding: 24px !important;
     border-left-width: 4px !important;
@@ -2966,212 +3087,7 @@ a.blogHyperlink:hover h2 {
 }
 
 .xc-home-tab .afg-service-row--fulfillment>.col:first-child,
-.xc-home-tab .afg-service-row--fulfillment>.col:last-child {
-    max-width: 100% !important;
-    margin: 0 !important;
-    padding: 0 !important;
-}
-
-.xc-home-tab .afg-service-row--fulfillment>.col:first-child {
-    flex: 0 0 300px !important;
-    width: 300px !important;
-}
-
-.xc-home-tab .afg-service-row--fulfillment>.col:last-child {
-    padding-left: 0 !important;
-    width: 100% !important;
-}
-
-.xc-home-tab .afg-service-row--fulfillment>.col:first-child>.col-inner {
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
-    margin: 0 !important;
-    padding: 0 !important;
-}
-
-.xc-home-tab .afg-service-row--fulfillment>.col:last-child>.col-inner {
-    margin: 0 !important;
-    padding: 0 !important;
-}
-
-.xc-home-tab .afg-service-row--fulfillment .afg-service-badge p {
-    border-radius: 4px !important;
-    letter-spacing: 1px !important;
-    padding: 4px 10px !important;
-    font-size: 10px !important;
-}
-
-.xc-home-tab .afg-service-row--fulfillment .afg-service-left-title p {
-    font-size: 22px !important;
-    font-weight: 700 !important;
-    line-height: 1.3 !important;
-    margin: 0 !important;
-}
-
-.xc-home-tab .afg-service-row--fulfillment>.col:first-child>.col-inner>p {
-    margin: 0 !important;
-    font-size: 14px !important;
-    line-height: 1.7 !important;
-}
-
-.xc-home-tab .afg-service-row--fulfillment>.col:first-child .img,
-.xc-home-tab .afg-service-row--fulfillment>.col:first-child .img-inner,
-.xc-home-tab .afg-service-row--fulfillment>.col:first-child .img img {
-    width: 100% !important;
-}
-
-.xc-home-tab .afg-service-row--fulfillment>.col:first-child .img img {
-    height: 200px !important;
-    object-fit: cover !important;
-    border-radius: 10px !important;
-}
-
-.xc-home-tab .afg-service-row--fulfillment .afg-service-meta p {
-    font-size: 12px !important;
-    line-height: 1.6 !important;
-    opacity: 0.6 !important;
-    margin: 0 !important;
-}
-
-.xc-home-tab .afg-service-row--fulfillment .button {
-    width: 100% !important;
-    padding: 12px 20px !important;
-    border-radius: 8px !important;
-}
-
-.xc-home-tab .afg-service-row--fulfillment .button span {
-    font-size: 13px !important;
-    font-weight: 600 !important;
-    letter-spacing: 0.3px !important;
-}
-
-.xc-home-tab .afg-service-row--fulfillment .button i {
-    margin-left: 8px !important;
-}
-
-/* Right side - numbered cards */
-.xc-home-tab .afg-service-row--fulfillment .afg-service-list {
-    counter-reset: ffm-items;
-    gap: 10px !important;
-    margin: 0 !important;
-    padding: 0 !important;
-}
-
-.xc-home-tab .afg-service-row--fulfillment .afg-service-list>.col {
-    width: 100% !important;
-    max-width: 100% !important;
-    flex: 0 0 100% !important;
-    margin: 0 !important;
-    padding: 0 !important;
-}
-
-.xc-home-tab .afg-service-row--fulfillment .afg-service-list>.col.medium-2,
-.xc-home-tab .afg-service-row--fulfillment .afg-service-list>.col.large-2 {
-    display: none !important;
-}
-
-.xc-home-tab .afg-service-row--fulfillment .afg-service-list>.col.medium-10,
-.xc-home-tab .afg-service-row--fulfillment .afg-service-list>.col.large-10 {
-    counter-increment: ffm-items;
-}
-
-.xc-home-tab .afg-service-row--fulfillment .afg-service-list>.col.medium-10>.col-inner,
-.xc-home-tab .afg-service-row--fulfillment .afg-service-list>.col.large-10>.col-inner {
-    width: 100% !important;
-    max-width: none !important;
-    padding: 14px 16px !important;
-    border-radius: 10px !important;
-    display: grid !important;
-    grid-template-columns: 44px 1fr !important;
-    gap: 12px !important;
-    align-items: start !important;
-    background: #eef7e8 !important;
-    border: 1px solid #c0dd97 !important;
-}
-
-.xc-home-tab .afg-service-row--fulfillment .afg-service-list>.col.medium-10>.col-inner::before,
-.xc-home-tab .afg-service-row--fulfillment .afg-service-list>.col.large-10>.col-inner::before {
-    content: counter(ffm-items, decimal-leading-zero);
-    width: 44px;
-    height: 44px;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: #c0dd97;
-    color: #27500a;
-    font-size: 22px;
-    font-weight: 700;
-    line-height: 1;
-}
-
-.xc-home-tab .afg-service-row--fulfillment .afg-service-list .text {
-    align-self: center;
-    width: 100% !important;
-    max-width: none !important;
-}
-
-.xc-home-tab .afg-service-row--fulfillment .afg-service-list .text p {
-    margin: 0 !important;
-    font-size: 13px !important;
-    line-height: 1.55 !important;
-    font-weight: 500 !important;
-    color: #3b6d11 !important;
-}
-
-.xc-home-tab .afg-service-row--fulfillment .afg-service-list .text p strong {
-    display: block;
-    margin-bottom: 3px;
-    font-size: 15px;
-    font-weight: 600 !important;
-    color: #27500a !important;
-}
-
-.xc-home-tab .afg-service-row--fulfillment .afg-service-list .text p .afg-item-sub {
-    display: block;
-    font-size: 13px;
-    line-height: 1.5;
-    opacity: 0.8;
-    color: #3b6d11;
-}
-
-@media (max-width: 768px) {
-    .xc-home-tab .afg-service-row--fulfillment {
-        display: flex !important;
-        flex-direction: column !important;
-        gap: 20px !important;
-        padding: 20px !important;
-    }
-
-    .xc-home-tab .afg-service-row--fulfillment>.col:first-child {
-        width: 100% !important;
-        flex: 0 0 100% !important;
-    }
-
-    .xc-home-tab .afg-service-row--fulfillment>.col:first-child .img img {
-        height: 200px !important;
-    }
-}
-
-/* =========================================
-   Logistics & Expansion - Match fulfillment layout
-   ========================================= */
-
-.xc-home-tab .afg-service-row--logistics,
-.xc-home-tab .afg-service-row--expansion {
-    display: grid !important;
-    grid-template-columns: 300px 1fr !important;
-    gap: 32px !important;
-    padding: 24px !important;
-    border-left-width: 4px !important;
-    border-radius: 16px !important;
-    width: 100% !important;
-    margin: 0 !important;
-    align-items: start !important;
-    justify-items: stretch !important;
-}
-
+.xc-home-tab .afg-service-row--fulfillment>.col:last-child,
 .xc-home-tab .afg-service-row--logistics>.col:first-child,
 .xc-home-tab .afg-service-row--logistics>.col:last-child,
 .xc-home-tab .afg-service-row--expansion>.col:first-child,
@@ -3181,33 +3097,101 @@ a.blogHyperlink:hover h2 {
     padding: 0 !important;
 }
 
+.xc-home-tab .afg-service-row--fulfillment>.col:first-child,
 .xc-home-tab .afg-service-row--logistics>.col:first-child,
 .xc-home-tab .afg-service-row--expansion>.col:first-child {
-    flex: 0 0 300px !important;
-    width: 300px !important;
+    flex: 1 1 auto !important;
+    width: 100% !important;
 }
 
+.xc-home-tab .afg-service-row--fulfillment>.col:last-child,
 .xc-home-tab .afg-service-row--logistics>.col:last-child,
 .xc-home-tab .afg-service-row--expansion>.col:last-child {
+    flex: 1 1 auto !important;
     width: 100% !important;
     padding-left: 0 !important;
 }
 
+.xc-home-tab .afg-service-row--fulfillment>.col:first-child>.col-inner,
 .xc-home-tab .afg-service-row--logistics>.col:first-child>.col-inner,
 .xc-home-tab .afg-service-row--expansion>.col:first-child>.col-inner {
     display: flex;
     flex-direction: column;
     gap: 16px;
+    justify-content: space-between;
+    align-items: stretch;
+    height: 100%;
+    min-height: 100%;
     margin: 0 !important;
-    padding: 0 !important;
+    padding: 0 12px !important;
+    box-sizing: border-box;
 }
 
+.xc-home-tab .afg-service-row--fulfillment>.col:first-child,
+.xc-home-tab .afg-service-row--logistics>.col:first-child,
+.xc-home-tab .afg-service-row--expansion>.col:first-child {
+    display: flex;
+}
+
+.xc-home-tab .afg-service-row--fulfillment>.col:first-child>.col-inner,
+.xc-home-tab .afg-service-row--logistics>.col:first-child>.col-inner,
+.xc-home-tab .afg-service-row--expansion>.col:first-child>.col-inner {
+    width: 100% !important;
+    max-width: none !important;
+    flex: 1 1 auto;
+}
+
+/* Keep left-column blocks on one clean vertical axis */
+.xc-home-tab .afg-service-row--fulfillment .afg-service-badge,
+.xc-home-tab .afg-service-row--fulfillment .afg-service-left-title,
+.xc-home-tab .afg-service-row--fulfillment .afg-service-meta,
+.xc-home-tab .afg-service-row--logistics .afg-service-badge,
+.xc-home-tab .afg-service-row--logistics .afg-service-left-title,
+.xc-home-tab .afg-service-row--logistics .afg-service-meta,
+.xc-home-tab .afg-service-row--expansion .afg-service-badge,
+.xc-home-tab .afg-service-row--expansion .afg-service-left-title,
+.xc-home-tab .afg-service-row--expansion .afg-service-meta,
+.xc-home-tab .afg-service-row--fulfillment>.col:first-child>.col-inner>p,
+.xc-home-tab .afg-service-row--logistics>.col:first-child>.col-inner>p,
+.xc-home-tab .afg-service-row--expansion>.col:first-child>.col-inner>p,
+.xc-home-tab .afg-service-row--fulfillment>.col:first-child .img,
+.xc-home-tab .afg-service-row--logistics>.col:first-child .img,
+.xc-home-tab .afg-service-row--expansion>.col:first-child .img,
+.xc-home-tab .afg-service-row--fulfillment>.col:first-child .button,
+.xc-home-tab .afg-service-row--logistics>.col:first-child .button,
+.xc-home-tab .afg-service-row--expansion>.col:first-child .button {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+}
+
+.xc-home-tab .afg-service-row--fulfillment>.col:first-child .text,
+.xc-home-tab .afg-service-row--logistics>.col:first-child .text,
+.xc-home-tab .afg-service-row--expansion>.col:first-child .text {
+    width: 100% !important;
+    max-width: none !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+}
+
+.xc-home-tab .afg-service-row--fulfillment>.col:first-child .button,
+.xc-home-tab .afg-service-row--logistics>.col:first-child .button,
+.xc-home-tab .afg-service-row--expansion>.col:first-child .button {
+    margin-top: auto !important;
+}
+
+.xc-home-tab .afg-service-row--fulfillment>.col:last-child>.col-inner,
 .xc-home-tab .afg-service-row--logistics>.col:last-child>.col-inner,
 .xc-home-tab .afg-service-row--expansion>.col:last-child>.col-inner {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
     margin: 0 !important;
     padding: 0 !important;
 }
 
+.xc-home-tab .afg-service-row--fulfillment .afg-service-badge p,
 .xc-home-tab .afg-service-row--logistics .afg-service-badge p,
 .xc-home-tab .afg-service-row--expansion .afg-service-badge p {
     border-radius: 4px !important;
@@ -3216,6 +3200,7 @@ a.blogHyperlink:hover h2 {
     font-size: 10px !important;
 }
 
+.xc-home-tab .afg-service-row--fulfillment .afg-service-left-title p,
 .xc-home-tab .afg-service-row--logistics .afg-service-left-title p,
 .xc-home-tab .afg-service-row--expansion .afg-service-left-title p {
     font-size: 38px !important;
@@ -3224,6 +3209,7 @@ a.blogHyperlink:hover h2 {
     margin: 0 !important;
 }
 
+.xc-home-tab .afg-service-row--fulfillment>.col:first-child>.col-inner>p,
 .xc-home-tab .afg-service-row--logistics>.col:first-child>.col-inner>p,
 .xc-home-tab .afg-service-row--expansion>.col:first-child>.col-inner>p {
     margin: 0 !important;
@@ -3231,22 +3217,29 @@ a.blogHyperlink:hover h2 {
     line-height: 1.7 !important;
 }
 
+.xc-home-tab .afg-service-row--fulfillment>.col:first-child .img,
+.xc-home-tab .afg-service-row--fulfillment>.col:first-child .img-inner,
+.xc-home-tab .afg-service-row--fulfillment>.col:first-child .img img,
 .xc-home-tab .afg-service-row--logistics>.col:first-child .img,
 .xc-home-tab .afg-service-row--logistics>.col:first-child .img-inner,
 .xc-home-tab .afg-service-row--logistics>.col:first-child .img img,
 .xc-home-tab .afg-service-row--expansion>.col:first-child .img,
 .xc-home-tab .afg-service-row--expansion>.col:first-child .img-inner,
 .xc-home-tab .afg-service-row--expansion>.col:first-child .img img {
-    width: 100% !important;
+    width: 92% !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
 }
 
+.xc-home-tab .afg-service-row--fulfillment>.col:first-child .img img,
 .xc-home-tab .afg-service-row--logistics>.col:first-child .img img,
 .xc-home-tab .afg-service-row--expansion>.col:first-child .img img {
-    height: 200px !important;
-    object-fit: cover !important;
+    height: auto !important;
+    object-fit: contain !important;
     border-radius: 10px !important;
 }
 
+.xc-home-tab .afg-service-row--fulfillment .afg-service-meta p,
 .xc-home-tab .afg-service-row--logistics .afg-service-meta p,
 .xc-home-tab .afg-service-row--expansion .afg-service-meta p {
     font-size: 12px !important;
@@ -3255,6 +3248,7 @@ a.blogHyperlink:hover h2 {
     margin: 0 !important;
 }
 
+.xc-home-tab .afg-service-row--fulfillment .button,
 .xc-home-tab .afg-service-row--logistics .button,
 .xc-home-tab .afg-service-row--expansion .button {
     width: 100% !important;
@@ -3262,6 +3256,7 @@ a.blogHyperlink:hover h2 {
     border-radius: 8px !important;
 }
 
+.xc-home-tab .afg-service-row--fulfillment .button span,
 .xc-home-tab .afg-service-row--logistics .button span,
 .xc-home-tab .afg-service-row--expansion .button span {
     font-size: 13px !important;
@@ -3269,20 +3264,25 @@ a.blogHyperlink:hover h2 {
     letter-spacing: 0.3px !important;
 }
 
+.xc-home-tab .afg-service-row--fulfillment .button i,
 .xc-home-tab .afg-service-row--logistics .button i,
 .xc-home-tab .afg-service-row--expansion .button i {
     margin-left: 8px !important;
 }
 
 /* Numbered cards on right */
+.xc-home-tab .afg-service-row--fulfillment .afg-service-list,
 .xc-home-tab .afg-service-row--logistics .afg-service-list,
 .xc-home-tab .afg-service-row--expansion .afg-service-list {
     counter-reset: service-items;
     gap: 10px !important;
-    margin: 0 !important;
+    width: 100% !important;
+    max-width: 680px;
+    margin: 0 auto !important;
     padding: 0 !important;
 }
 
+.xc-home-tab .afg-service-row--fulfillment .afg-service-list>.col,
 .xc-home-tab .afg-service-row--logistics .afg-service-list>.col,
 .xc-home-tab .afg-service-row--expansion .afg-service-list>.col {
     width: 100% !important;
@@ -3292,6 +3292,8 @@ a.blogHyperlink:hover h2 {
     padding: 0 !important;
 }
 
+.xc-home-tab .afg-service-row--fulfillment .afg-service-list>.col.medium-2,
+.xc-home-tab .afg-service-row--fulfillment .afg-service-list>.col.large-2,
 .xc-home-tab .afg-service-row--logistics .afg-service-list>.col.medium-2,
 .xc-home-tab .afg-service-row--logistics .afg-service-list>.col.large-2,
 .xc-home-tab .afg-service-row--expansion .afg-service-list>.col.medium-2,
@@ -3299,6 +3301,8 @@ a.blogHyperlink:hover h2 {
     display: none !important;
 }
 
+.xc-home-tab .afg-service-row--fulfillment .afg-service-list>.col.medium-10,
+.xc-home-tab .afg-service-row--fulfillment .afg-service-list>.col.large-10,
 .xc-home-tab .afg-service-row--logistics .afg-service-list>.col.medium-10,
 .xc-home-tab .afg-service-row--logistics .afg-service-list>.col.large-10,
 .xc-home-tab .afg-service-row--expansion .afg-service-list>.col.medium-10,
@@ -3306,6 +3310,8 @@ a.blogHyperlink:hover h2 {
     counter-increment: service-items;
 }
 
+.xc-home-tab .afg-service-row--fulfillment .afg-service-list>.col.medium-10>.col-inner,
+.xc-home-tab .afg-service-row--fulfillment .afg-service-list>.col.large-10>.col-inner,
 .xc-home-tab .afg-service-row--logistics .afg-service-list>.col.medium-10>.col-inner,
 .xc-home-tab .afg-service-row--logistics .afg-service-list>.col.large-10>.col-inner,
 .xc-home-tab .afg-service-row--expansion .afg-service-list>.col.medium-10>.col-inner,
@@ -3320,6 +3326,12 @@ a.blogHyperlink:hover h2 {
     align-items: start !important;
 }
 
+.xc-home-tab .afg-service-row--fulfillment .afg-service-list>.col.medium-10>.col-inner,
+.xc-home-tab .afg-service-row--fulfillment .afg-service-list>.col.large-10>.col-inner {
+    background: #eef7e8 !important;
+    border: 1px solid #c0dd97 !important;
+}
+
 .xc-home-tab .afg-service-row--logistics .afg-service-list>.col.medium-10>.col-inner,
 .xc-home-tab .afg-service-row--logistics .afg-service-list>.col.large-10>.col-inner {
     background: #d8e8f9 !important;
@@ -3332,6 +3344,8 @@ a.blogHyperlink:hover h2 {
     border: 1px solid #f0b860 !important;
 }
 
+.xc-home-tab .afg-service-row--fulfillment .afg-service-list>.col.medium-10>.col-inner::before,
+.xc-home-tab .afg-service-row--fulfillment .afg-service-list>.col.large-10>.col-inner::before,
 .xc-home-tab .afg-service-row--logistics .afg-service-list>.col.medium-10>.col-inner::before,
 .xc-home-tab .afg-service-row--logistics .afg-service-list>.col.large-10>.col-inner::before,
 .xc-home-tab .afg-service-row--expansion .afg-service-list>.col.medium-10>.col-inner::before,
@@ -3348,6 +3362,12 @@ a.blogHyperlink:hover h2 {
     line-height: 1;
 }
 
+.xc-home-tab .afg-service-row--fulfillment .afg-service-list>.col.medium-10>.col-inner::before,
+.xc-home-tab .afg-service-row--fulfillment .afg-service-list>.col.large-10>.col-inner::before {
+    background: #c0dd97;
+    color: #27500a;
+}
+
 .xc-home-tab .afg-service-row--logistics .afg-service-list>.col.medium-10>.col-inner::before,
 .xc-home-tab .afg-service-row--logistics .afg-service-list>.col.large-10>.col-inner::before {
     background: #9dc6ef;
@@ -3360,6 +3380,7 @@ a.blogHyperlink:hover h2 {
     color: #633806;
 }
 
+.xc-home-tab .afg-service-row--fulfillment .afg-service-list .text,
 .xc-home-tab .afg-service-row--logistics .afg-service-list .text,
 .xc-home-tab .afg-service-row--expansion .afg-service-list .text {
     align-self: center;
@@ -3367,12 +3388,17 @@ a.blogHyperlink:hover h2 {
     max-width: none !important;
 }
 
+.xc-home-tab .afg-service-row--fulfillment .afg-service-list .text p,
 .xc-home-tab .afg-service-row--logistics .afg-service-list .text p,
 .xc-home-tab .afg-service-row--expansion .afg-service-list .text p {
     margin: 0 !important;
     font-size: 13px !important;
     line-height: 1.55 !important;
     font-weight: 500 !important;
+}
+
+.xc-home-tab .afg-service-row--fulfillment .afg-service-list .text p {
+    color: #3b6d11 !important;
 }
 
 .xc-home-tab .afg-service-row--logistics .afg-service-list .text p {
@@ -3383,6 +3409,7 @@ a.blogHyperlink:hover h2 {
     color: #854f0b !important;
 }
 
+.xc-home-tab .afg-service-row--fulfillment .afg-service-list .text p strong,
 .xc-home-tab .afg-service-row--logistics .afg-service-list .text p strong,
 .xc-home-tab .afg-service-row--expansion .afg-service-list .text p strong {
     display: block;
@@ -3399,12 +3426,21 @@ a.blogHyperlink:hover h2 {
     color: #633806 !important;
 }
 
+.xc-home-tab .afg-service-row--fulfillment .afg-service-list .text p strong {
+    color: #27500a !important;
+}
+
+.xc-home-tab .afg-service-row--fulfillment .afg-service-list .text p .afg-item-sub,
 .xc-home-tab .afg-service-row--logistics .afg-service-list .text p .afg-item-sub,
 .xc-home-tab .afg-service-row--expansion .afg-service-list .text p .afg-item-sub {
     display: block;
     font-size: 13px;
     line-height: 1.5;
     opacity: 0.8;
+}
+
+.xc-home-tab .afg-service-row--fulfillment .afg-service-list .text p .afg-item-sub {
+    color: #3b6d11;
 }
 
 .xc-home-tab .afg-service-row--logistics .afg-service-list .text p .afg-item-sub {
@@ -3416,6 +3452,7 @@ a.blogHyperlink:hover h2 {
 }
 
 @media (max-width: 768px) {
+    .xc-home-tab .afg-service-row--fulfillment,
     .xc-home-tab .afg-service-row--logistics,
     .xc-home-tab .afg-service-row--expansion {
         display: flex !important;
@@ -3424,14 +3461,1288 @@ a.blogHyperlink:hover h2 {
         padding: 20px !important;
     }
 
+    .xc-home-tab .afg-service-row--fulfillment>.col:first-child,
     .xc-home-tab .afg-service-row--logistics>.col:first-child,
     .xc-home-tab .afg-service-row--expansion>.col:first-child {
         width: 100% !important;
         flex: 0 0 100% !important;
     }
 
+    .xc-home-tab .afg-service-row--fulfillment>.col:first-child .img img,
     .xc-home-tab .afg-service-row--logistics>.col:first-child .img img,
     .xc-home-tab .afg-service-row--expansion>.col:first-child .img img {
-        height: 200px !important;
+        height: auto !important;
+    }
+
+    .xc-home-tab .afg-service-row--fulfillment .afg-service-left-title p,
+    .xc-home-tab .afg-service-row--logistics .afg-service-left-title p,
+    .xc-home-tab .afg-service-row--expansion .afg-service-left-title p {
+        font-size: 30px !important;
+    }
+}
+
+/* =========================================
+   Service blocks visual baseline (match sample)
+   ========================================= */
+
+.xc-home-tab .afg-service-row--fulfillment,
+.xc-home-tab .afg-service-row--logistics,
+.xc-home-tab .afg-service-row--expansion {
+    overflow: hidden;
+}
+
+.xc-home-tab .afg-service-row--fulfillment>.col:first-child,
+.xc-home-tab .afg-service-row--logistics>.col:first-child,
+.xc-home-tab .afg-service-row--expansion>.col:first-child {
+    border-right: 1px solid var(--afg-border) !important;
+    padding-right: 24px !important;
+    box-sizing: border-box;
+}
+
+.xc-home-tab .afg-service-row--fulfillment>.col:last-child,
+.xc-home-tab .afg-service-row--logistics>.col:last-child,
+.xc-home-tab .afg-service-row--expansion>.col:last-child {
+    padding-left: 24px !important;
+    box-sizing: border-box;
+}
+
+.xc-home-tab .afg-service-row--fulfillment .afg-service-left-title p,
+.xc-home-tab .afg-service-row--logistics .afg-service-left-title p,
+.xc-home-tab .afg-service-row--expansion .afg-service-left-title p {
+    font-size: 44px !important;
+    line-height: 1.15 !important;
+}
+
+.xc-home-tab .afg-service-row--fulfillment>.col:first-child>.col-inner>p,
+.xc-home-tab .afg-service-row--logistics>.col:first-child>.col-inner>p,
+.xc-home-tab .afg-service-row--expansion>.col:first-child>.col-inner>p {
+    font-size: 16px !important;
+    line-height: 1.55 !important;
+}
+
+.xc-home-tab .afg-service-row--fulfillment .afg-service-list>.col.medium-10>.col-inner,
+.xc-home-tab .afg-service-row--fulfillment .afg-service-list>.col.large-10>.col-inner,
+.xc-home-tab .afg-service-row--logistics .afg-service-list>.col.medium-10>.col-inner,
+.xc-home-tab .afg-service-row--logistics .afg-service-list>.col.large-10>.col-inner,
+.xc-home-tab .afg-service-row--expansion .afg-service-list>.col.medium-10>.col-inner,
+.xc-home-tab .afg-service-row--expansion .afg-service-list>.col.large-10>.col-inner {
+    background: rgba(255, 255, 255, 0.72) !important;
+    border-radius: 12px !important;
+    padding: 14px 16px !important;
+}
+
+.xc-home-tab .afg-service-row--fulfillment .afg-service-list>.col.medium-10>.col-inner::before,
+.xc-home-tab .afg-service-row--fulfillment .afg-service-list>.col.large-10>.col-inner::before,
+.xc-home-tab .afg-service-row--logistics .afg-service-list>.col.medium-10>.col-inner::before,
+.xc-home-tab .afg-service-row--logistics .afg-service-list>.col.large-10>.col-inner::before,
+.xc-home-tab .afg-service-row--expansion .afg-service-list>.col.medium-10>.col-inner::before,
+.xc-home-tab .afg-service-row--expansion .afg-service-list>.col.large-10>.col-inner::before {
+    width: 32px;
+    height: 32px;
+    font-size: 16px;
+}
+
+.xc-home-tab .afg-service-row--fulfillment .afg-service-list .text p strong,
+.xc-home-tab .afg-service-row--logistics .afg-service-list .text p strong,
+.xc-home-tab .afg-service-row--expansion .afg-service-list .text p strong {
+    font-size: 16px !important;
+    line-height: 1.3 !important;
+}
+
+.xc-home-tab .afg-service-row--fulfillment .afg-service-list .text p,
+.xc-home-tab .afg-service-row--logistics .afg-service-list .text p,
+.xc-home-tab .afg-service-row--expansion .afg-service-list .text p {
+    font-size: 16px !important;
+    line-height: 1.45 !important;
+}
+
+@media (max-width: 768px) {
+    .xc-home-tab .afg-service-row--fulfillment>.col:first-child,
+    .xc-home-tab .afg-service-row--logistics>.col:first-child,
+    .xc-home-tab .afg-service-row--expansion>.col:first-child {
+        border-right: 0 !important;
+        border-bottom: 1px solid var(--afg-border) !important;
+        padding-right: 0 !important;
+        padding-bottom: 18px !important;
+    }
+
+    .xc-home-tab .afg-service-row--fulfillment>.col:last-child,
+    .xc-home-tab .afg-service-row--logistics>.col:last-child,
+    .xc-home-tab .afg-service-row--expansion>.col:last-child {
+        padding-left: 0 !important;
+        padding-top: 18px !important;
+    }
+
+    .xc-home-tab .afg-service-row--fulfillment .afg-service-left-title p,
+    .xc-home-tab .afg-service-row--logistics .afg-service-left-title p,
+    .xc-home-tab .afg-service-row--expansion .afg-service-left-title p {
+        font-size: 32px !important;
+    }
+}
+
+/* Keep logistics/expansion right items to 1 title + 1 description line */
+.xc-home-tab .afg-service-row--logistics .afg-service-list .text p,
+.xc-home-tab .afg-service-row--expansion .afg-service-list .text p {
+    display: grid !important;
+    gap: 2px;
+}
+
+.xc-home-tab .afg-service-row--logistics .afg-service-list .text p strong,
+.xc-home-tab .afg-service-row--expansion .afg-service-list .text p strong,
+.xc-home-tab .afg-service-row--logistics .afg-service-list .text p .afg-item-sub,
+.xc-home-tab .afg-service-row--expansion .afg-service-list .text p .afg-item-sub {
+    display: block;
+    white-space: normal;
+    overflow: visible;
+    text-overflow: clip;
+}
+
+/* Final alignment fix: right column balanced all sides */
+.xc-home-tab .afg-service-row--fulfillment>.col:last-child,
+.xc-home-tab .afg-service-row--logistics>.col:last-child,
+.xc-home-tab .afg-service-row--expansion>.col:last-child {
+    padding-left: 24px !important;
+    padding-right: 24px !important;
+    display: flex !important;
+    align-items: stretch !important;
+}
+
+.xc-home-tab .afg-service-row--fulfillment>.col:last-child>.col-inner,
+.xc-home-tab .afg-service-row--logistics>.col:last-child>.col-inner,
+.xc-home-tab .afg-service-row--expansion>.col:last-child>.col-inner {
+    flex: 1 1 auto;
+    display: flex !important;
+    align-items: stretch !important;
+    justify-content: stretch !important;
+}
+
+.xc-home-tab .afg-service-row--fulfillment .afg-service-list,
+.xc-home-tab .afg-service-row--logistics .afg-service-list,
+.xc-home-tab .afg-service-row--expansion .afg-service-list {
+    width: 100% !important;
+    max-width: none !important;
+    margin: auto 0 !important;
+    display: block !important;
+    height: auto !important;
+    min-height: 0 !important;
+}
+
+/* Center right-column card group vertically with balanced top/bottom space */
+.xc-home-tab .afg-service-row--fulfillment>.col:last-child>.col-inner,
+.xc-home-tab .afg-service-row--logistics>.col:last-child>.col-inner,
+.xc-home-tab .afg-service-row--expansion>.col:last-child>.col-inner {
+    display: flex !important;
+    align-items: center !important;
+}
+
+@media (max-width: 768px) {
+    .xc-home-tab .afg-service-row--fulfillment>.col:last-child,
+    .xc-home-tab .afg-service-row--logistics>.col:last-child,
+    .xc-home-tab .afg-service-row--expansion>.col:last-child {
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+    }
+
+    .xc-home-tab .afg-service-row--fulfillment .afg-service-list,
+    .xc-home-tab .afg-service-row--logistics .afg-service-list,
+    .xc-home-tab .afg-service-row--expansion .afg-service-list {
+        margin: 0 !important;
+    }
+}
+
+/* Hard lock right-column item layout for all 3 blocks */
+.xc-home-tab .afg-service-row--fulfillment .afg-service-list,
+.xc-home-tab .afg-service-row--logistics .afg-service-list,
+.xc-home-tab .afg-service-row--expansion .afg-service-list {
+    display: block !important;
+}
+
+.xc-home-tab .afg-service-row--fulfillment .afg-service-list > .col.medium-2,
+.xc-home-tab .afg-service-row--fulfillment .afg-service-list > .col.large-2,
+.xc-home-tab .afg-service-row--logistics .afg-service-list > .col.medium-2,
+.xc-home-tab .afg-service-row--logistics .afg-service-list > .col.large-2,
+.xc-home-tab .afg-service-row--expansion .afg-service-list > .col.medium-2,
+.xc-home-tab .afg-service-row--expansion .afg-service-list > .col.large-2 {
+    display: none !important;
+}
+
+.xc-home-tab .afg-service-row--fulfillment .afg-service-list > .col.medium-10,
+.xc-home-tab .afg-service-row--fulfillment .afg-service-list > .col.large-10,
+.xc-home-tab .afg-service-row--logistics .afg-service-list > .col.medium-10,
+.xc-home-tab .afg-service-row--logistics .afg-service-list > .col.large-10,
+.xc-home-tab .afg-service-row--expansion .afg-service-list > .col.medium-10,
+.xc-home-tab .afg-service-row--expansion .afg-service-list > .col.large-10 {
+    width: 100% !important;
+    max-width: 100% !important;
+    flex: 0 0 100% !important;
+    margin: 0 !important;
+    margin-bottom: 10px !important;
+    padding: 0 !important;
+}
+
+.xc-home-tab .afg-service-row--fulfillment .afg-service-list > .col.medium-10:last-child,
+.xc-home-tab .afg-service-row--fulfillment .afg-service-list > .col.large-10:last-child,
+.xc-home-tab .afg-service-row--logistics .afg-service-list > .col.medium-10:last-child,
+.xc-home-tab .afg-service-row--logistics .afg-service-list > .col.large-10:last-child,
+.xc-home-tab .afg-service-row--expansion .afg-service-list > .col.medium-10:last-child,
+.xc-home-tab .afg-service-row--expansion .afg-service-list > .col.large-10:last-child {
+    margin-bottom: 0 !important;
+}
+
+/* Final right-column spacing: equal 4-side gutter + equal item gaps */
+.xc-home-tab .afg-service-row--fulfillment>.col:last-child,
+.xc-home-tab .afg-service-row--logistics>.col:last-child,
+.xc-home-tab .afg-service-row--expansion>.col:last-child {
+    padding: 24px !important;
+    box-sizing: border-box;
+    display: block !important;
+}
+
+.xc-home-tab .afg-service-row--fulfillment>.col:last-child>.col-inner,
+.xc-home-tab .afg-service-row--logistics>.col:last-child>.col-inner,
+.xc-home-tab .afg-service-row--expansion>.col:last-child>.col-inner {
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    display: block !important;
+}
+
+.xc-home-tab .afg-service-row--fulfillment .afg-service-list,
+.xc-home-tab .afg-service-row--logistics .afg-service-list,
+.xc-home-tab .afg-service-row--expansion .afg-service-list {
+    width: 100% !important;
+    max-width: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    gap: 12px !important;
+}
+
+.xc-home-tab .afg-service-row--fulfillment .afg-service-list>.col.medium-10,
+.xc-home-tab .afg-service-row--fulfillment .afg-service-list>.col.large-10,
+.xc-home-tab .afg-service-row--logistics .afg-service-list>.col.medium-10,
+.xc-home-tab .afg-service-row--logistics .afg-service-list>.col.large-10,
+.xc-home-tab .afg-service-row--expansion .afg-service-list>.col.medium-10,
+.xc-home-tab .afg-service-row--expansion .afg-service-list>.col.large-10 {
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+@media (max-width: 768px) {
+    .xc-home-tab .afg-service-row--fulfillment>.col:last-child,
+    .xc-home-tab .afg-service-row--logistics>.col:last-child,
+    .xc-home-tab .afg-service-row--expansion>.col:last-child {
+        padding: 16px !important;
+    }
+}
+
+/* Strict right-column alignment: no top/left drift */
+.xc-home-tab .afg-service-row--fulfillment>.col:last-child,
+.xc-home-tab .afg-service-row--logistics>.col:last-child,
+.xc-home-tab .afg-service-row--expansion>.col:last-child {
+    padding: 24px !important;
+    box-sizing: border-box !important;
+}
+
+.xc-home-tab .afg-service-row--fulfillment>.col:last-child>.col-inner,
+.xc-home-tab .afg-service-row--logistics>.col:last-child>.col-inner,
+.xc-home-tab .afg-service-row--expansion>.col:last-child>.col-inner {
+    margin: 0 !important;
+    padding: 0 !important;
+    width: 100% !important;
+}
+
+.xc-home-tab .afg-service-row--fulfillment .afg-service-list.row,
+.xc-home-tab .afg-service-row--logistics .afg-service-list.row,
+.xc-home-tab .afg-service-row--expansion .afg-service-list.row {
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+.xc-home-tab .afg-service-row--fulfillment .afg-service-list {
+    margin-top: 0 !important;
+    margin-left: 0 !important;
+}
+
+.xc-home-tab .afg-service-row--logistics .afg-service-list,
+.xc-home-tab .afg-service-row--expansion .afg-service-list {
+    margin-top: 0 !important;
+    margin-left: 0 !important;
+}
+
+/* =========================================================
+   FINAL UNIFIED SERVICE LAYOUT
+   Reference: Fulfillment block (keep each block's own colors/content)
+   ========================================================= */
+
+body .xc-home-tab .afg-service-row--fulfillment {
+    --svc-bg: #eaf3de;
+    --svc-border: #a9cd7d;
+    --svc-heading: #154c08;
+    --svc-text: #356f18;
+    --svc-chip-bg: #b7d88c;
+    --svc-chip-text: #154c08;
+    --svc-card-bg: rgba(255, 255, 255, 0.62);
+    --svc-cta-bg: #38780f;
+    --svc-cta-text: #f4ffe8;
+}
+
+body .xc-home-tab .afg-service-row--logistics {
+    --svc-bg: #e6f1fb;
+    --svc-border: #94c1ef;
+    --svc-heading: #0b4588;
+    --svc-text: #2f6fb6;
+    --svc-chip-bg: #a7c9ef;
+    --svc-chip-text: #0b4588;
+    --svc-card-bg: rgba(255, 255, 255, 0.64);
+    --svc-cta-bg: #195fa5;
+    --svc-cta-text: #eef6ff;
+}
+
+body .xc-home-tab .afg-service-row--expansion {
+    --svc-bg: #f8ecd8;
+    --svc-border: #efb463;
+    --svc-heading: #6d3f0c;
+    --svc-text: #9a6222;
+    --svc-chip-bg: #f0be73;
+    --svc-chip-text: #6d3f0c;
+    --svc-card-bg: rgba(255, 255, 255, 0.62);
+    --svc-cta-bg: #9a6222;
+    --svc-cta-text: #fff6eb;
+}
+
+body .xc-home-tab .afg-service-row--fulfillment,
+body .xc-home-tab .afg-service-row--logistics,
+body .xc-home-tab .afg-service-row--expansion {
+    display: grid !important;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) !important;
+    gap: 24px !important;
+    padding: 20px !important;
+    border: 1px solid var(--svc-border) !important;
+    border-left-width: 3px !important;
+    border-radius: 14px !important;
+    background: var(--svc-bg) !important;
+    align-items: stretch !important;
+}
+
+body .xc-home-tab .afg-service-row--fulfillment > .col,
+body .xc-home-tab .afg-service-row--logistics > .col,
+body .xc-home-tab .afg-service-row--expansion > .col {
+    width: auto !important;
+    max-width: none !important;
+    flex: unset !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+body .xc-home-tab .afg-service-row--fulfillment > .col:first-child,
+body .xc-home-tab .afg-service-row--logistics > .col:first-child,
+body .xc-home-tab .afg-service-row--expansion > .col:first-child {
+    padding-right: 24px !important;
+    border-right: 1px solid var(--svc-border) !important;
+}
+
+body .xc-home-tab .afg-service-row--fulfillment > .col:last-child,
+body .xc-home-tab .afg-service-row--logistics > .col:last-child,
+body .xc-home-tab .afg-service-row--expansion > .col:last-child {
+    padding: 0 8px !important;
+}
+
+body .xc-home-tab .afg-service-row--fulfillment > .col:first-child > .col-inner,
+body .xc-home-tab .afg-service-row--logistics > .col:first-child > .col-inner,
+body .xc-home-tab .afg-service-row--expansion > .col:first-child > .col-inner {
+    display: grid !important;
+    gap: 14px !important;
+    align-content: start !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+body .xc-home-tab .afg-service-row--fulfillment .afg-service-left-title p,
+body .xc-home-tab .afg-service-row--logistics .afg-service-left-title p,
+body .xc-home-tab .afg-service-row--expansion .afg-service-left-title p {
+    margin: 0 !important;
+    font-size: 48px !important;
+    line-height: 1.12 !important;
+    font-weight: 700 !important;
+    color: var(--svc-heading) !important;
+}
+
+body .xc-home-tab .afg-service-row--fulfillment > .col:first-child > .col-inner > p,
+body .xc-home-tab .afg-service-row--logistics > .col:first-child > .col-inner > p,
+body .xc-home-tab .afg-service-row--expansion > .col:first-child > .col-inner > p {
+    margin: 0 !important;
+    font-size: 16px !important;
+    line-height: 1.55 !important;
+    color: var(--svc-text) !important;
+}
+
+body .xc-home-tab .afg-service-row--fulfillment > .col:first-child .img,
+body .xc-home-tab .afg-service-row--logistics > .col:first-child .img,
+body .xc-home-tab .afg-service-row--expansion > .col:first-child .img {
+    width: 100% !important;
+    margin: 0 !important;
+}
+
+body .xc-home-tab .afg-service-row--fulfillment > .col:first-child .img-inner,
+body .xc-home-tab .afg-service-row--logistics > .col:first-child .img-inner,
+body .xc-home-tab .afg-service-row--expansion > .col:first-child .img-inner {
+    border-radius: 12px !important;
+    overflow: hidden !important;
+}
+
+body .xc-home-tab .afg-service-row--fulfillment > .col:first-child .img img,
+body .xc-home-tab .afg-service-row--logistics > .col:first-child .img img,
+body .xc-home-tab .afg-service-row--expansion > .col:first-child .img img {
+    width: 100% !important;
+    height: auto !important;
+    object-fit: contain !important;
+    border-radius: 12px !important;
+}
+
+body .xc-home-tab .afg-service-row--fulfillment .button,
+body .xc-home-tab .afg-service-row--logistics .button,
+body .xc-home-tab .afg-service-row--expansion .button {
+    width: auto !important;
+    min-width: 220px !important;
+    height: 44px !important;
+    padding: 0 18px !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    border-radius: 8px !important;
+    background: var(--svc-cta-bg) !important;
+    border-color: var(--svc-cta-bg) !important;
+}
+
+body .xc-home-tab .afg-service-row--fulfillment .button span,
+body .xc-home-tab .afg-service-row--fulfillment .button i,
+body .xc-home-tab .afg-service-row--logistics .button span,
+body .xc-home-tab .afg-service-row--logistics .button i,
+body .xc-home-tab .afg-service-row--expansion .button span,
+body .xc-home-tab .afg-service-row--expansion .button i {
+    color: var(--svc-cta-text) !important;
+}
+
+body .xc-home-tab .afg-service-row--fulfillment > .col:last-child > .col-inner,
+body .xc-home-tab .afg-service-row--logistics > .col:last-child > .col-inner,
+body .xc-home-tab .afg-service-row--expansion > .col:last-child > .col-inner {
+    margin: 0 !important;
+    padding: 0 !important;
+    min-height: 100% !important;
+}
+
+body .xc-home-tab .afg-service-row--fulfillment .afg-service-list.row,
+body .xc-home-tab .afg-service-row--logistics .afg-service-list.row,
+body .xc-home-tab .afg-service-row--expansion .afg-service-list.row {
+    margin: 0 !important;
+    padding: 0 !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: space-between !important;
+    gap: 10px !important;
+    min-height: 100% !important;
+}
+
+/* 4-item blocks need larger breathing space to balance height */
+body .xc-home-tab .afg-service-row--logistics .afg-service-list.row,
+body .xc-home-tab .afg-service-row--expansion .afg-service-list.row {
+    gap: 18px !important;
+}
+
+/* Rebalance right column vertically (fix top-heavy blocks) */
+@media (min-width: 901px) {
+    body .xc-home-tab .afg-service-row--fulfillment > .col:last-child,
+    body .xc-home-tab .afg-service-row--logistics > .col:last-child,
+    body .xc-home-tab .afg-service-row--expansion > .col:last-child,
+    body .xc-home-tab .afg-service-row--fulfillment > .col:last-child > .col-inner,
+    body .xc-home-tab .afg-service-row--logistics > .col:last-child > .col-inner,
+    body .xc-home-tab .afg-service-row--expansion > .col:last-child > .col-inner {
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        height: 100% !important;
+    }
+
+    body .xc-home-tab .afg-service-row--fulfillment .afg-service-list.row,
+    body .xc-home-tab .afg-service-row--logistics .afg-service-list.row,
+    body .xc-home-tab .afg-service-row--expansion .afg-service-list.row {
+        min-height: 0 !important;
+        height: auto !important;
+        justify-content: flex-start !important;
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+
+    body .xc-home-tab .afg-service-row--fulfillment .afg-service-list.row {
+        gap: 14px !important;
+    }
+
+    body .xc-home-tab .afg-service-row--logistics .afg-service-list.row,
+    body .xc-home-tab .afg-service-row--expansion .afg-service-list.row {
+        gap: 20px !important;
+    }
+}
+
+/* Absolute final vertical-center fix for right column */
+@media (min-width: 901px) {
+    body .xc-home-tab .afg-service-row--fulfillment,
+    body .xc-home-tab .afg-service-row--logistics,
+    body .xc-home-tab .afg-service-row--expansion {
+        align-items: center !important;
+    }
+
+    body .xc-home-tab .afg-service-row--fulfillment > .col:last-child,
+    body .xc-home-tab .afg-service-row--logistics > .col:last-child,
+    body .xc-home-tab .afg-service-row--expansion > .col:last-child {
+        display: flex !important;
+        align-items: center !important;
+        align-self: center !important;
+        padding-top: 0 !important;
+        padding-bottom: 0 !important;
+    }
+
+    body .xc-home-tab .afg-service-row--fulfillment > .col:last-child > .col-inner,
+    body .xc-home-tab .afg-service-row--logistics > .col:last-child > .col-inner,
+    body .xc-home-tab .afg-service-row--expansion > .col:last-child > .col-inner {
+        width: 100% !important;
+        display: flex !important;
+        align-items: center !important;
+        height: auto !important;
+        min-height: 0 !important;
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+
+    body .xc-home-tab .afg-service-row--fulfillment .afg-service-list,
+    body .xc-home-tab .afg-service-row--logistics .afg-service-list,
+    body .xc-home-tab .afg-service-row--expansion .afg-service-list,
+    body .xc-home-tab .afg-service-row--fulfillment .afg-service-list.row,
+    body .xc-home-tab .afg-service-row--logistics .afg-service-list.row,
+    body .xc-home-tab .afg-service-row--expansion .afg-service-list.row {
+        width: 100% !important;
+        height: auto !important;
+        min-height: 0 !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        display: flex !important;
+        flex-direction: column !important;
+        justify-content: center !important;
+    }
+}
+
+body .xc-home-tab .afg-service-row--fulfillment .afg-service-list > .col.medium-2,
+body .xc-home-tab .afg-service-row--fulfillment .afg-service-list > .col.large-2,
+body .xc-home-tab .afg-service-row--logistics .afg-service-list > .col.medium-2,
+body .xc-home-tab .afg-service-row--logistics .afg-service-list > .col.large-2,
+body .xc-home-tab .afg-service-row--expansion .afg-service-list > .col.medium-2,
+body .xc-home-tab .afg-service-row--expansion .afg-service-list > .col.large-2 {
+    display: none !important;
+}
+
+body .xc-home-tab .afg-service-row--fulfillment .afg-service-list > .col.medium-10,
+body .xc-home-tab .afg-service-row--fulfillment .afg-service-list > .col.large-10,
+body .xc-home-tab .afg-service-row--logistics .afg-service-list > .col.medium-10,
+body .xc-home-tab .afg-service-row--logistics .afg-service-list > .col.large-10,
+body .xc-home-tab .afg-service-row--expansion .afg-service-list > .col.medium-10,
+body .xc-home-tab .afg-service-row--expansion .afg-service-list > .col.large-10 {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+body .xc-home-tab .afg-service-row--fulfillment .afg-service-list > .col.medium-10 > .col-inner,
+body .xc-home-tab .afg-service-row--fulfillment .afg-service-list > .col.large-10 > .col-inner,
+body .xc-home-tab .afg-service-row--logistics .afg-service-list > .col.medium-10 > .col-inner,
+body .xc-home-tab .afg-service-row--logistics .afg-service-list > .col.large-10 > .col-inner,
+body .xc-home-tab .afg-service-row--expansion .afg-service-list > .col.medium-10 > .col-inner,
+body .xc-home-tab .afg-service-row--expansion .afg-service-list > .col.large-10 > .col-inner {
+    padding: 14px 16px !important;
+    border: 1px solid var(--svc-border) !important;
+    border-radius: 12px !important;
+    background: var(--svc-card-bg) !important;
+    display: grid !important;
+    grid-template-columns: 34px 1fr !important;
+    gap: 12px !important;
+    align-items: start !important;
+}
+
+body .xc-home-tab .afg-service-row--fulfillment .afg-service-list > .col.medium-10 > .col-inner::before,
+body .xc-home-tab .afg-service-row--fulfillment .afg-service-list > .col.large-10 > .col-inner::before,
+body .xc-home-tab .afg-service-row--logistics .afg-service-list > .col.medium-10 > .col-inner::before,
+body .xc-home-tab .afg-service-row--logistics .afg-service-list > .col.large-10 > .col-inner::before,
+body .xc-home-tab .afg-service-row--expansion .afg-service-list > .col.medium-10 > .col-inner::before,
+body .xc-home-tab .afg-service-row--expansion .afg-service-list > .col.large-10 > .col-inner::before {
+    content: counter(service-items, decimal-leading-zero);
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--svc-chip-bg) !important;
+    color: var(--svc-chip-text) !important;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+body .xc-home-tab .afg-service-row--fulfillment .afg-service-list .text p,
+body .xc-home-tab .afg-service-row--logistics .afg-service-list .text p,
+body .xc-home-tab .afg-service-row--expansion .afg-service-list .text p {
+    margin: 0 !important;
+    font-size: 16px !important;
+    line-height: 1.45 !important;
+    color: var(--svc-text) !important;
+}
+
+body .xc-home-tab .afg-service-row--fulfillment .afg-service-list .text p strong,
+body .xc-home-tab .afg-service-row--logistics .afg-service-list .text p strong,
+body .xc-home-tab .afg-service-row--expansion .afg-service-list .text p strong {
+    display: block;
+    margin-bottom: 2px;
+    font-size: 16px !important;
+    line-height: 1.3 !important;
+    color: var(--svc-heading) !important;
+}
+
+body .xc-home-tab .afg-service-row--fulfillment .afg-service-list .text p .afg-item-sub,
+body .xc-home-tab .afg-service-row--logistics .afg-service-list .text p .afg-item-sub,
+body .xc-home-tab .afg-service-row--expansion .afg-service-list .text p .afg-item-sub {
+    display: block;
+    white-space: normal;
+    overflow: visible;
+    text-overflow: clip;
+    color: var(--svc-text) !important;
+}
+
+@media (max-width: 900px) {
+    body .xc-home-tab .afg-service-row--fulfillment,
+    body .xc-home-tab .afg-service-row--logistics,
+    body .xc-home-tab .afg-service-row--expansion {
+        grid-template-columns: 1fr !important;
+        gap: 16px !important;
+    }
+
+    body .xc-home-tab .afg-service-row--fulfillment > .col:first-child,
+    body .xc-home-tab .afg-service-row--logistics > .col:first-child,
+    body .xc-home-tab .afg-service-row--expansion > .col:first-child {
+        padding-right: 0 !important;
+        padding-bottom: 14px !important;
+        border-right: 0 !important;
+        border-bottom: 1px solid var(--svc-border) !important;
+    }
+
+    body .xc-home-tab .afg-service-row--fulfillment > .col:last-child,
+    body .xc-home-tab .afg-service-row--logistics > .col:last-child,
+    body .xc-home-tab .afg-service-row--expansion > .col:last-child {
+        padding: 0 !important;
+    }
+
+    body .xc-home-tab .afg-service-row--fulfillment .afg-service-left-title p,
+    body .xc-home-tab .afg-service-row--logistics .afg-service-left-title p,
+    body .xc-home-tab .afg-service-row--expansion .afg-service-left-title p {
+        font-size: 36px !important;
+    }
+}
+
+/* Clean final lock for right column (single source of truth) */
+@media (min-width: 901px) {
+    body .xc-home-tab .afg-service-row--fulfillment > .col:last-child,
+    body .xc-home-tab .afg-service-row--logistics > .col:last-child,
+    body .xc-home-tab .afg-service-row--expansion > .col:last-child {
+        padding: 16px !important;
+        box-sizing: border-box !important;
+        display: flex !important;
+        align-items: center !important;
+    }
+
+    body .xc-home-tab .afg-service-row--fulfillment > .col:last-child > .col-inner,
+    body .xc-home-tab .afg-service-row--logistics > .col:last-child > .col-inner,
+    body .xc-home-tab .afg-service-row--expansion > .col:last-child > .col-inner {
+        width: 100% !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        display: block !important;
+    }
+
+    body .xc-home-tab .afg-service-row--fulfillment .afg-service-list,
+    body .xc-home-tab .afg-service-row--logistics .afg-service-list,
+    body .xc-home-tab .afg-service-row--expansion .afg-service-list {
+        width: 100% !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        display: grid !important;
+        grid-template-columns: 1fr !important;
+        gap: 22px !important;
+    }
+}
+
+@media (max-width: 900px) {
+    body .xc-home-tab .afg-service-row--fulfillment > .col:last-child,
+    body .xc-home-tab .afg-service-row--logistics > .col:last-child,
+    body .xc-home-tab .afg-service-row--expansion > .col:last-child {
+        padding: 12px !important;
+        display: block !important;
+    }
+
+    body .xc-home-tab .afg-service-row--fulfillment > .col:last-child > .col-inner,
+    body .xc-home-tab .afg-service-row--logistics > .col:last-child > .col-inner,
+    body .xc-home-tab .afg-service-row--expansion > .col:last-child > .col-inner {
+        display: block !important;
+    }
+}
+
+/* =========================================================
+   USP section - CSS only layout lock (no text changes)
+   ========================================================= */
+body .row-usp {
+    background: #ffffff !important;
+    border: 1px solid #e5e7eb !important;
+    border-radius: 12px !important;
+    box-shadow: none !important;
+    padding: 28px !important;
+    display: grid !important;
+    grid-template-columns: 50% 50% !important;
+    gap: 24px !important;
+    align-items: center !important;
+}
+
+body .row-usp > .col {
+    width: auto !important;
+    max-width: none !important;
+    flex: unset !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+body .row-usp > .col:first-child > .col-inner {
+    margin: 0 !important;
+    padding: 0 8px 0 0 !important;
+}
+
+body .row-usp > .col:first-child .video,
+body .row-usp > .col:first-child .responsive-video,
+body .row-usp > .col:first-child .video-fit,
+body .row-usp > .col:first-child .fluid-width-video-wrapper,
+body .row-usp > .col:first-child iframe {
+    border-radius: 12px !important;
+    overflow: hidden !important;
+}
+
+body .row-usp > .col:last-child {
+    padding-left: 8px !important;
+}
+
+body .row-usp > .col:last-child > .col-inner {
+    margin: 0 !important;
+    padding: 0 !important;
+    counter-reset: usp-count;
+}
+
+body .row-usp > .col:last-child > .col-inner > h3 {
+    position: relative;
+    margin: 0 !important;
+    padding: 14px 16px 10px 56px !important;
+    background: #ffffff;
+    border: 1px solid #d7e4d8;
+    border-bottom: 0;
+    border-radius: 12px 12px 0 0;
+    color: #1f2937 !important;
+    font-size: 30px !important;
+    line-height: 1.35 !important;
+    font-weight: 700 !important;
+    counter-increment: usp-count;
+}
+
+body .row-usp > .col:last-child > .col-inner > h3::after {
+    content: counter(usp-count, decimal-leading-zero);
+    position: absolute;
+    left: 16px;
+    top: 12px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 1px solid #1a7a3c;
+    color: #1a7a3c;
+    background: #f7fff8;
+    font-size: 13px;
+    line-height: 28px;
+    text-align: center;
+    font-weight: 700;
+}
+
+/* Hide hardcoded leading index in heading text without content edit */
+body .row-usp > .col:last-child > .col-inner > h3::before {
+    content: "";
+    position: absolute;
+    left: 46px;
+    top: 12px;
+    width: 34px;
+    height: 30px;
+    background: #ffffff;
+}
+
+body .row-usp > .col:last-child > .col-inner > h3 + ul,
+body .row-usp > .col:last-child > .col-inner > h3 + p {
+    margin: 0 0 14px 0 !important;
+    padding: 0 16px 14px 56px !important;
+    background: #ffffff;
+    border: 1px solid #d7e4d8;
+    border-top: 0;
+    border-radius: 0 0 12px 12px;
+    color: #4b5563 !important;
+}
+
+body .row-usp > .col:last-child > .col-inner > h3 + ul {
+    list-style: disc;
+}
+
+body .row-usp > .col:last-child > .col-inner > h3 + ul li,
+body .row-usp > .col:last-child > .col-inner > h3 + p {
+    font-size: 14px !important;
+    line-height: 1.6 !important;
+    margin: 0 !important;
+}
+
+body .row-usp > .col:last-child > .col-inner > h3 + ul li + li {
+    margin-top: 4px !important;
+}
+
+@media (max-width: 900px) {
+    body .row-usp {
+        grid-template-columns: 1fr !important;
+        gap: 16px !important;
+        padding: 16px !important;
+    }
+
+    body .row-usp > .col:first-child > .col-inner,
+    body .row-usp > .col:last-child {
+        padding: 0 !important;
+    }
+}
+
+/* =========================================================
+   USP block - classic split layout (match provided sample)
+   ========================================================= */
+
+body .row-usp,
+body .row-usp.afg-usp-modern {
+    background: #f8f8f8 !important;
+    border: 1px solid #d9d9d9 !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    padding: 20px 0 !important;
+    display: flex !important;
+    flex-wrap: nowrap !important;
+    align-items: stretch !important;
+}
+
+body .row-usp > .col,
+body .row-usp.afg-usp-modern > .col {
+    width: 50% !important;
+    max-width: 50% !important;
+    flex: 0 0 50% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+body .row-usp > .col:first-child > .col-inner,
+body .row-usp.afg-usp-modern > .col:first-child > .col-inner {
+    padding: 0 24px !important;
+}
+
+body .row-usp > .col:last-child,
+body .row-usp.afg-usp-modern > .col:last-child {
+    border-left: 1px solid #d9d9d9 !important;
+}
+
+body .row-usp > .col:last-child > .col-inner,
+body .row-usp.afg-usp-modern > .col:last-child > .col-inner {
+    padding: 0 24px !important;
+    margin: 0 !important;
+    counter-reset: usp-num;
+}
+
+body .row-usp > .col:first-child .video,
+body .row-usp > .col:first-child .responsive-video,
+body .row-usp > .col:first-child .video-fit,
+body .row-usp > .col:first-child .fluid-width-video-wrapper,
+body .row-usp > .col:first-child iframe {
+    border-radius: 8px !important;
+    overflow: hidden !important;
+}
+
+body .row-usp > .col:first-child p {
+    margin: 8px 0 0 !important;
+    font-size: 13px !important;
+    line-height: 1.4 !important;
+    color: #666 !important;
+}
+
+body .row-usp > .col:last-child h3 {
+    margin: 0 0 6px !important;
+    padding-left: 26px !important;
+    position: relative;
+    font-size: 24px !important;
+    line-height: 1.4 !important;
+    color: #1e1e1e !important;
+    font-weight: 700 !important;
+    counter-increment: usp-num;
+}
+
+body .row-usp > .col:last-child h3::before {
+    content: counter(usp-num) ".";
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: #198754;
+    font-weight: 700;
+}
+
+body .row-usp > .col:last-child ul {
+    margin: 0 0 16px 26px !important;
+}
+
+body .row-usp > .col:last-child li,
+body .row-usp > .col:last-child p {
+    font-size: 15px !important;
+    line-height: 1.7 !important;
+    color: #3c3c3c !important;
+    margin-bottom: 2px !important;
+}
+
+@media (max-width: 900px) {
+    body .row-usp,
+    body .row-usp.afg-usp-modern {
+        display: block !important;
+        padding: 14px !important;
+    }
+
+    body .row-usp > .col,
+    body .row-usp.afg-usp-modern > .col {
+        width: 100% !important;
+        max-width: 100% !important;
+        flex: 0 0 100% !important;
+    }
+
+    body .row-usp > .col:last-child,
+    body .row-usp.afg-usp-modern > .col:last-child {
+        border-left: 0 !important;
+        border-top: 1px solid #d9d9d9 !important;
+        margin-top: 14px !important;
+        padding-top: 14px !important;
+    }
+
+    body .row-usp > .col:first-child > .col-inner,
+    body .row-usp > .col:last-child > .col-inner,
+    body .row-usp.afg-usp-modern > .col:first-child > .col-inner,
+    body .row-usp.afg-usp-modern > .col:last-child > .col-inner {
+        padding: 0 !important;
+    }
+}
+
+/* =========================================
+   AFG Footer - Premium SaaS Layout
+   ========================================= */
+
+.xc-footer.section,
+.xc-footer .section-bg,
+.xc-footer .section-bg.fill {
+    background: linear-gradient(180deg, #f7fafe 0%, #f2f6fb 100%) !important;
+}
+
+.xc-footer.section {
+    padding: 40px 16px 24px !important;
+}
+
+.xc-footer .afg-footer-shell {
+    max-width: 1280px;
+    margin: 0 auto;
+    background: #ffffff;
+    border: 1px solid #e3ebf5;
+    border-radius: 24px;
+    box-shadow: 0 18px 45px rgba(22, 40, 64, 0.1);
+    padding: 36px;
+}
+
+.xc-footer .afg-footer-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr) minmax(0, 1.2fr);
+    gap: 28px;
+}
+
+.xc-footer .afg-footer-col {
+    border: 1px solid #e5edf7;
+    border-radius: 16px;
+    background: #f9fcff;
+    padding: 24px;
+}
+
+.xc-footer .afg-footer-col h3 {
+    margin: 0 0 14px;
+    color: #12385f;
+    font-size: 19px;
+    line-height: 1.3;
+    font-weight: 700;
+}
+
+.xc-footer .afg-footer-col p,
+.xc-footer .afg-footer-col li,
+.xc-footer .afg-footer-col a {
+    color: #2f4e71;
+    font-size: 14px;
+    line-height: 1.65;
+}
+
+.xc-footer .afg-footer-logo {
+    margin-bottom: 14px;
+}
+
+.xc-footer .afg-footer-logo img {
+    width: 98px;
+    max-width: 100%;
+    height: auto;
+}
+
+.xc-footer .afg-footer-logo-text {
+    font-size: 23px;
+    font-weight: 700;
+    color: #12385f;
+    letter-spacing: 0.3px;
+    margin-bottom: 14px;
+}
+
+.xc-footer .afg-footer-company {
+    color: #12385f;
+    font-weight: 600;
+    margin: 0 0 6px;
+}
+
+.xc-footer .afg-footer-address {
+    margin: 0 0 8px;
+}
+
+.xc-footer .afg-footer-support {
+    color: #55759a;
+    margin: 0 0 14px;
+}
+
+.xc-footer .afg-footer-socials {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 8px 0 14px;
+    flex-wrap: wrap;
+}
+
+.xc-footer .afg-footer-social {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: #edf4fc;
+    border: 1px solid #d2e2f4;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: #1d4d80;
+    text-decoration: none;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.xc-footer .afg-footer-social:hover {
+    background: #1f7ae0;
+    transform: translateY(-2px);
+}
+
+.xc-footer .afg-footer-social i,
+.xc-footer .afg-footer-social span {
+    font-size: 14px;
+    line-height: 1;
+    color: #1d4d80;
+}
+
+.xc-footer .afg-footer-social:hover i,
+.xc-footer .afg-footer-social:hover span {
+    color: #fff;
+}
+
+.xc-footer .afg-footer-badge img {
+    width: auto;
+    max-width: 150px;
+    height: auto;
+    border-radius: 8px;
+}
+
+.xc-footer .afg-footer-col--links ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.xc-footer .afg-footer-col--links li + li {
+    margin-top: 10px;
+}
+
+.xc-footer .afg-footer-col--links a {
+    display: inline-flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    text-decoration: none;
+    color: #2f4e71;
+    border-radius: 8px;
+    padding: 6px 4px;
+    transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.xc-footer .afg-footer-col--links a i {
+    font-style: normal;
+    color: #4f7fb3;
+    transition: transform 0.2s ease;
+}
+
+.xc-footer .afg-footer-col--links a:hover {
+    color: #0f3968;
+    transform: translateX(4px);
+}
+
+.xc-footer .afg-footer-col--links a:hover i {
+    transform: translateX(2px);
+}
+
+.xc-footer .afg-footer-map-wrap {
+    border-radius: 14px;
+    overflow: hidden;
+    background: #dde8f5;
+    box-shadow: inset 0 0 0 1px #d5e2f1;
+}
+
+.xc-footer .afg-footer-map-wrap iframe {
+    display: block;
+    width: 100%;
+    min-height: 260px;
+    border: 0;
+}
+
+.xc-footer .afg-footer-map-actions {
+    margin-top: 14px;
+}
+
+.xc-footer .afg-footer-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: 42px;
+    padding: 0 16px;
+    border-radius: 10px;
+    background: #2e8f4d;
+    border: 1px solid #2e8f4d;
+    color: #f8fffb;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 700;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.xc-footer .afg-footer-btn:hover {
+    background: #257541;
+    transform: translateY(-1px);
+}
+
+.xc-footer .afg-footer-bottom {
+    margin-top: 28px;
+    border-top: 1px solid #d9e5f3;
+    border-radius: 14px;
+    background: #f5f9fe;
+    padding: 16px 18px 12px;
+}
+
+.xc-footer .afg-footer-bottom-row {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    gap: 16px;
+    align-items: center;
+}
+
+.xc-footer .afg-footer-bottom-brand {
+    color: #12385f;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.xc-footer .afg-footer-bottom-address,
+.xc-footer .afg-footer-bottom-hotline {
+    color: #4a6a90;
+    font-size: 13px;
+    line-height: 1.5;
+}
+
+.xc-footer .afg-footer-bottom-hotline {
+    white-space: nowrap;
+}
+
+.xc-footer .afg-footer-copyright {
+    margin: 10px 0 0;
+    text-align: center;
+    color: #6888ad;
+    font-size: 12px;
+}
+
+.xc-footer-copyright {
+    display: none !important;
+}
+
+@media (max-width: 1024px) {
+    .xc-footer .afg-footer-shell {
+        padding: 28px;
+    }
+
+    .xc-footer .afg-footer-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .xc-footer .afg-footer-col--map {
+        grid-column: 1 / -1;
+    }
+
+    .xc-footer .afg-footer-bottom-row {
+        grid-template-columns: 1fr;
+        text-align: left;
+        gap: 6px;
+    }
+}
+
+@media (max-width: 768px) {
+    .xc-footer.section {
+        padding: 24px 12px 18px !important;
+    }
+
+    .xc-footer .afg-footer-shell {
+        border-radius: 18px;
+        padding: 18px;
+    }
+
+    .xc-footer .afg-footer-grid {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 14px;
+    }
+
+    .xc-footer .afg-footer-col {
+        border-radius: 14px;
+        padding: 16px;
+    }
+
+    .xc-footer .afg-footer-col h3 {
+        font-size: 17px;
+    }
+
+    .xc-footer .afg-footer-map-wrap iframe {
+        min-height: 220px;
+    }
+
+    .xc-footer .afg-footer-btn {
+        width: 100%;
     }
 }
